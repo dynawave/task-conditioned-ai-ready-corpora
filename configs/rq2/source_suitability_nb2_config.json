@@ -1,0 +1,69 @@
+{
+  "analysis_tasks": [
+    "T1a_ACRONYM",
+    "T1b_EXPLICIT_DEFINITION",
+    "T2_NUMERIC",
+    "T3_CLAIM"
+  ],
+  "code_sha256": "7d6dc144d799f7479e5383920e8fdcd27977886cb0e74dfd3a788ba6be484e69",
+  "continuous_standardization": "z-standardized within 1,898 positive-token Holdout papers using sample SD",
+  "descriptive_only_task": "T1_TOTAL",
+  "experiment": "corpus_v1_sft_b1_source_suitability_statistical_analysis",
+  "input_assets": {
+    "holdout_membership_sha256": "e4066ba08a65e69055eb795f07b7b97715930dcce0f21a48819af35fe4541b4f",
+    "machine_verifier_config_v1_2_sha256": "26a035bf6e9bf7d63d0d401def58d4ddee740b6fe6057925aa368fe50e3b1bd0",
+    "paper_features_sha256": "786c4daf67e9c17a94e004efb339c83b35e2c550c2f10bf2549aac90ce4319b4",
+    "paper_task_metrics_sha256": "9273b70d0a0b551f8e0f2a9188bc2a85dc293f49d87777a66aecede278a0c463",
+    "v1_2_directory": "aicorpus-derived\\experiments\\corpus_v1\\sft_b_holdout1900_v1_2",
+    "v1_2_summary_sha256": "2d0e73bcdfbe809ac95161588e51c44759da88bd6917633cb172f28482188006"
+  },
+  "multiple_comparison": "Holm correction separately within each task/model over 10 source-feature hypotheses",
+  "predictor_set_frozen_before_outcome_model_fitting": [
+    "results_presence",
+    "discussion_presence",
+    "conclusion_presence",
+    "methods_presence",
+    "section_count",
+    "average_paragraph_length",
+    "figure_density_per_10k",
+    "formula_density_per_10k",
+    "suspected_word_split_rate",
+    "reference_like_rate"
+  ],
+  "primary_model": {
+    "family": "Negative Binomial",
+    "n_per_task": 1898,
+    "offset": "log(source_tokens/10000)",
+    "outcome": "machine_verified_count",
+    "parameterization": "NB2: Var(Y|X)=mu+alpha*mu^2"
+  },
+  "prohibited_actions": {
+    "Holdout_rerun": false,
+    "SFT_QA_generation": false,
+    "SFT_training_or_scaling": false,
+    "candidate_or_verifier_change": false
+  },
+  "robustness": [
+    "continuous predictors winsorized at 1st/99th percentiles then re-standardized",
+    "remove exactly ceil(1%*1898)=19 highest-yield papers separately per task"
+  ],
+  "software": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.10.20 (main, Mar 24 2026, 22:57:16) [MSC v.1944 64 bit (AMD64)]",
+    "scipy": null,
+    "statsmodels": "0.14.6"
+  },
+  "status": "SOURCE_SUITABILITY_READY",
+  "supplementary_binary_models": {
+    "fitted": [
+      "T1b_EXPLICIT_DEFINITION",
+      "T3_CLAIM"
+    ],
+    "not_fitted_saturated": [
+      "T1a_ACRONYM",
+      "T2_NUMERIC"
+    ]
+  },
+  "zero_fit_warning_rule": "absolute observed-minus-NB-predicted zero proportion >= 0.1"
+}

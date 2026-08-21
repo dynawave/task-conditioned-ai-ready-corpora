@@ -1,0 +1,401 @@
+{
+  "experiment_id": "corpus_v1_rag_public_gold_v1",
+  "status": "RAG_RESULT_READY",
+  "s2k_engineering": {
+    "scope": "S2K_engineering_audit_only",
+    "paper_count": 2000,
+    "canonical_path": "aicorpus-derived/experiments/corpus_v1/pilot2k/run_02/canonical_documents.parquet",
+    "canonical_sha256": "2c72b3615d5299534d6336c9d4a4b4db0982853011718babeabc2aafa18e007b",
+    "s2k_membership_sha256": "4381084194802c40c2a55fa77a32fb0fcc9e6b44dbd6a9e8fbfd38dc8fd108f4",
+    "views": {
+      "B1": {
+        "view": "B1",
+        "unit_count": 46826,
+        "mean_units_per_paper": 23.413,
+        "token_length": {
+          "min": 7,
+          "mean": 502.34651689232476,
+          "median": 512.0,
+          "p90": 512.0,
+          "p95": 512.0,
+          "max": 512
+        },
+        "provenance_complete_rate": 1.0,
+        "section_path_complete_rate": 0.9998932217144322,
+        "page_complete_rate": 1.0,
+        "bbox_complete_rate": 1.0,
+        "object_context_unit_rate": 0.0,
+        "object_context_counts": {
+          "figure": 0,
+          "table": 0,
+          "formula": 0
+        },
+        "mean_support_paragraphs": 0.0,
+        "build_seconds": 17.119041299214587,
+        "logical_jsonl_size_bytes": 141527410,
+        "logical_size_note": "Materialized UTF-8 JSONL byte count computed in memory; RAG views were not persisted as extra files."
+      },
+      "B2": {
+        "view": "B2",
+        "unit_count": 114511,
+        "mean_units_per_paper": 57.2555,
+        "token_length": {
+          "min": 5,
+          "mean": 193.82159792509017,
+          "median": 155.0,
+          "p90": 392.0,
+          "p95": 493.0,
+          "max": 2945
+        },
+        "provenance_complete_rate": 1.0,
+        "section_path_complete_rate": 0.9997118180786125,
+        "page_complete_rate": 1.0,
+        "bbox_complete_rate": 1.0,
+        "object_context_unit_rate": 0.0,
+        "object_context_counts": {
+          "figure": 0,
+          "table": 0,
+          "formula": 0
+        },
+        "mean_support_paragraphs": 0.0,
+        "build_seconds": 28.430058697704226,
+        "logical_jsonl_size_bytes": 154766282,
+        "logical_size_note": "Materialized UTF-8 JSONL byte count computed in memory; RAG views were not persisted as extra files."
+      },
+      "B3": {
+        "view": "B3",
+        "unit_count": 114511,
+        "mean_units_per_paper": 57.2555,
+        "token_length": {
+          "min": 9,
+          "mean": 475.9057557789208,
+          "median": 409.0,
+          "p90": 922.0,
+          "p95": 1130.0,
+          "max": 5008
+        },
+        "provenance_complete_rate": 1.0,
+        "section_path_complete_rate": 0.9997118180786125,
+        "page_complete_rate": 1.0,
+        "bbox_complete_rate": 1.0,
+        "object_context_unit_rate": 0.17650706045707398,
+        "object_context_counts": {
+          "figure": 17443,
+          "table": 5719,
+          "formula": 4659
+        },
+        "mean_support_paragraphs": 1.4468304355040127,
+        "build_seconds": 69.80297310231254,
+        "logical_jsonl_size_bytes": 322816418,
+        "logical_size_note": "Materialized UTF-8 JSONL byte count computed in memory; RAG views were not persisted as extra files."
+      }
+    },
+    "formal_retrieval_metrics_computed": false,
+    "synthetic_queries_used": false
+  },
+  "public_gold_mapping": {
+    "dataset": "QASPER",
+    "version": "v0.3",
+    "split": "test",
+    "evaluation_role": "reused_formal_public_gold_not_blind",
+    "frozen_eligible_question_count": 1309,
+    "formal_question_count": 1292,
+    "excluded_questions_without_complete_mapped_annotation_set": 17,
+    "total_gold_evidence_strings": 5648,
+    "mapped_gold_evidence_strings": 5420,
+    "unmatched_gold_evidence_strings": 228,
+    "mapping_rate": 0.9596317280453258,
+    "mapping_gate": 0.95,
+    "mapping_gate_passed": true,
+    "match_method_counts": {
+      "adjacent_2_paragraph": 27,
+      "evidence_in_paragraph": 4,
+      "normalized_exact": 5063,
+      "paragraph_in_evidence": 3,
+      "unresolved": 551
+    },
+    "gold_semantics": "Each annotator evidence list is a complete set; a mapped evidence string may have alternative atomic locations. CES succeeds if any complete annotator set is recovered."
+  },
+  "leakage_audit": {
+    "benchmark_paper_count": 416,
+    "canonical_s2k_source_id_overlap_count": 0,
+    "canonical_s2k_source_id_overlaps": [],
+    "canonical_s2k_normalized_exact_title_overlap_count": 0,
+    "canonical_s2k_near_title_overlap_count": 0,
+    "near_title_rule": "token Jaccard >=0.90 with at least 5 normalized title tokens",
+    "near_title_matches": [],
+    "frozen_prep_s2k_audit": {
+      "member_count": 2000,
+      "public_eval_source_overlap": 0,
+      "public_eval_title_overlap": 0
+    },
+    "historical_benchmark_use": [
+      "QASPER validation was used for earlier retrieval/SEP configuration development.",
+      "QASPER test was consumed by an earlier frozen retrieval experiment.",
+      "This run is formal public-gold reuse, not blind evaluation and not independent confirmation."
+    ],
+    "gold_used_for_current_parameter_tuning": false
+  },
+  "public_corpus": {
+    "B1": {
+      "unit_count": 4611,
+      "token_length": {
+        "min": 65,
+        "mean": 492.0392539579267,
+        "median": 512.0,
+        "p90": 512.0,
+        "p95": 512.0,
+        "max": 512
+      },
+      "object_context_unit_rate": 0.0
+    },
+    "B2": {
+      "unit_count": 19510,
+      "token_length": {
+        "min": 7,
+        "mean": 113.4545873910815,
+        "median": 98.0,
+        "p90": 212.0,
+        "p95": 256.0,
+        "max": 4928
+      },
+      "object_context_unit_rate": 0.0
+    },
+    "B3": {
+      "unit_count": 19510,
+      "token_length": {
+        "min": 7,
+        "mean": 257.74407995899537,
+        "median": 229.0,
+        "p90": 463.0,
+        "p95": 546.0,
+        "max": 5093
+      },
+      "object_context_unit_rate": 0.02701178882624295
+    }
+  },
+  "metrics": [
+    {
+      "dataset": "QASPER",
+      "view": "B1",
+      "question_count": 1292,
+      "ces@5": 0.6888544891640866,
+      "budget_ces@1024": 0.39473684210526316,
+      "hit@5": 0.7964396284829721,
+      "recall@5": 0.7418932181509581,
+      "mrr": 0.5124459167575175,
+      "budget_recall@1024": 0.4526109532881979,
+      "hit@1": 0.3018575851393189,
+      "recall@10": 0.9374394697150115,
+      "mean_top5_tokens": 2420.705882352941,
+      "mean_budget_tokens": 973.1052631578947
+    },
+    {
+      "dataset": "QASPER",
+      "view": "B2",
+      "question_count": 1292,
+      "ces@5": 0.5820433436532507,
+      "budget_ces@1024": 0.6501547987616099,
+      "hit@5": 0.7515479876160991,
+      "recall@5": 0.6581372981751831,
+      "mrr": 0.5502238426375613,
+      "budget_recall@1024": 0.7244800125462502,
+      "hit@1": 0.3931888544891641,
+      "recall@10": 0.7999653416306505,
+      "mean_top5_tokens": 685.7399380804953,
+      "mean_budget_tokens": 936.7260061919504
+    },
+    {
+      "dataset": "QASPER",
+      "view": "B3",
+      "question_count": 1292,
+      "ces@5": 0.6222910216718266,
+      "budget_ces@1024": 0.5340557275541795,
+      "hit@5": 0.7546439628482973,
+      "recall@5": 0.6889494962698482,
+      "mrr": 0.5808919698626234,
+      "budget_recall@1024": 0.5943326329040033,
+      "hit@1": 0.4458204334365325,
+      "recall@10": 0.8141472996613944,
+      "mean_top5_tokens": 1405.9442724458204,
+      "mean_budget_tokens": 849.1269349845202
+    }
+  ],
+  "bootstrap": [
+    {
+      "row_type": "view_estimate",
+      "metric": "ces@5",
+      "view_a": "B1",
+      "view_b": "",
+      "estimate": 0.6888544891640866,
+      "ci_low": 0.663312693498452,
+      "ci_high": 0.7143962848297214,
+      "raw_p": "",
+      "holm_p": "",
+      "significant_0_05": "",
+      "bootstrap_replicates": 10000
+    },
+    {
+      "row_type": "view_estimate",
+      "metric": "ces@5",
+      "view_a": "B2",
+      "view_b": "",
+      "estimate": 0.5820433436532507,
+      "ci_low": 0.5557275541795665,
+      "ci_high": 0.6091331269349846,
+      "raw_p": "",
+      "holm_p": "",
+      "significant_0_05": "",
+      "bootstrap_replicates": 10000
+    },
+    {
+      "row_type": "view_estimate",
+      "metric": "ces@5",
+      "view_a": "B3",
+      "view_b": "",
+      "estimate": 0.6222910216718266,
+      "ci_low": 0.5959752321981424,
+      "ci_high": 0.6493808049535603,
+      "raw_p": "",
+      "holm_p": "",
+      "significant_0_05": "",
+      "bootstrap_replicates": 10000
+    },
+    {
+      "row_type": "view_estimate",
+      "metric": "budget_ces@1024",
+      "view_a": "B1",
+      "view_b": "",
+      "estimate": 0.39473684210526316,
+      "ci_low": 0.3684210526315789,
+      "ci_high": 0.4218266253869969,
+      "raw_p": "",
+      "holm_p": "",
+      "significant_0_05": "",
+      "bootstrap_replicates": 10000
+    },
+    {
+      "row_type": "view_estimate",
+      "metric": "budget_ces@1024",
+      "view_a": "B2",
+      "view_b": "",
+      "estimate": 0.6501547987616099,
+      "ci_low": 0.6238390092879257,
+      "ci_high": 0.6764705882352942,
+      "raw_p": "",
+      "holm_p": "",
+      "significant_0_05": "",
+      "bootstrap_replicates": 10000
+    },
+    {
+      "row_type": "view_estimate",
+      "metric": "budget_ces@1024",
+      "view_a": "B3",
+      "view_b": "",
+      "estimate": 0.5340557275541795,
+      "ci_low": 0.5069659442724458,
+      "ci_high": 0.5611455108359134,
+      "raw_p": "",
+      "holm_p": "",
+      "significant_0_05": "",
+      "bootstrap_replicates": 10000
+    },
+    {
+      "row_type": "pairwise_difference",
+      "metric": "ces@5",
+      "view_a": "B2",
+      "view_b": "B1",
+      "estimate": -0.10681114551083591,
+      "ci_low": -0.13622291021671828,
+      "ci_high": -0.07739938080495357,
+      "raw_p": 0.00019998000199980003,
+      "holm_p": 0.0011998800119988001,
+      "significant_0_05": true,
+      "bootstrap_replicates": 10000
+    },
+    {
+      "row_type": "pairwise_difference",
+      "metric": "ces@5",
+      "view_a": "B3",
+      "view_b": "B1",
+      "estimate": -0.06656346749226007,
+      "ci_low": -0.09442724458204332,
+      "ci_high": -0.03792569659442724,
+      "raw_p": 0.00019998000199980003,
+      "holm_p": 0.0011998800119988001,
+      "significant_0_05": true,
+      "bootstrap_replicates": 10000
+    },
+    {
+      "row_type": "pairwise_difference",
+      "metric": "ces@5",
+      "view_a": "B3",
+      "view_b": "B2",
+      "estimate": 0.04024767801857585,
+      "ci_low": 0.01934984520123839,
+      "ci_high": 0.06114551083591335,
+      "raw_p": 0.00039996000399960006,
+      "holm_p": 0.0011998800119988001,
+      "significant_0_05": true,
+      "bootstrap_replicates": 10000
+    },
+    {
+      "row_type": "pairwise_difference",
+      "metric": "budget_ces@1024",
+      "view_a": "B2",
+      "view_b": "B1",
+      "estimate": 0.25541795665634676,
+      "ci_low": 0.22523219814241485,
+      "ci_high": 0.2848297213622291,
+      "raw_p": 0.00019998000199980003,
+      "holm_p": 0.0011998800119988001,
+      "significant_0_05": true,
+      "bootstrap_replicates": 10000
+    },
+    {
+      "row_type": "pairwise_difference",
+      "metric": "budget_ces@1024",
+      "view_a": "B3",
+      "view_b": "B1",
+      "estimate": 0.1393188854489164,
+      "ci_low": 0.10913312693498456,
+      "ci_high": 0.16950464396284826,
+      "raw_p": 0.00019998000199980003,
+      "holm_p": 0.0011998800119988001,
+      "significant_0_05": true,
+      "bootstrap_replicates": 10000
+    },
+    {
+      "row_type": "pairwise_difference",
+      "metric": "budget_ces@1024",
+      "view_a": "B3",
+      "view_b": "B2",
+      "estimate": -0.11609907120743033,
+      "ci_low": -0.13931888544891635,
+      "ci_high": -0.09285990712074328,
+      "raw_p": 0.00019998000199980003,
+      "holm_p": 0.0011998800119988001,
+      "significant_0_05": true,
+      "bootstrap_replicates": 10000
+    }
+  ],
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.7.1+cu128",
+    "transformers": "4.51.3",
+    "pyarrow": "25.0.0",
+    "numpy": "2.2.6",
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 5090 Laptop GPU",
+    "device_total_memory_bytes": 25650855936,
+    "peak_gpu_memory_bytes": 1411180032,
+    "dtype": "float16",
+    "batch_size": 128
+  },
+  "runtime": {
+    "retrieval_seconds": 64.43643069267273,
+    "total_seconds": 261.5977551937103
+  },
+  "blockers": [],
+  "interpretation_boundary": "Observed retrieval differences are specific to this frozen QASPER setup and do not by themselves establish a universally optimal corpus construction strategy."
+}

@@ -1,0 +1,283 @@
+{
+  "SFT_training": false,
+  "T1a_ACRONYM": {
+    "dataset": {
+      "archive": {
+        "path": "aicorpus-data\\external_gold\\AAAI-21-SDU-shared-task-1-AI_9e810512.zip",
+        "sha256": "f29503274152ee22b32696fd4c36928816e1d46fc2b2c1dcccc407b07e18c3d3"
+      },
+      "commit_date_utc": "2024-12-15T23:56:06Z",
+      "dataset": "SciAI: Scientific Acronym Identification",
+      "download_date": "2026-08-12",
+      "files": {
+        "LICENSE": {
+          "bytes": 1067,
+          "sha256": "e20912cb99e3516a7d1e928d1ec4d60f0f4f657e8c2c35bcdfe92065082ec957"
+        },
+        "README.md": {
+          "bytes": 7333,
+          "sha256": "8203240d09a1ebc8f86ac9144f67586a908385f53af4f97becdcc8b0f431fef0"
+        },
+        "code/character_match.py": {
+          "bytes": 5052,
+          "sha256": "7fb4e42005f3ed54e56d17d78f2b1d6d6124f4561c65ebfd75e3fd3bcf7f1807"
+        },
+        "dataset/test.json": {
+          "bytes": 548904,
+          "sha256": "5a37584eaa56ac23ffef23de7109d07bac6a19928eda96184348d89a01c82671"
+        },
+        "dataset/truth.json": {
+          "bytes": 904025,
+          "sha256": "52d653c61d4967a9b2e2a7c9ccf1db84ace14ab640de9c9fe7759df8d2da3ddb"
+        },
+        "scorer.py": {
+          "bytes": 3698,
+          "sha256": "e9991930ef6308ce3301912f3301b0d785d9b14ec28561ca40bcc235f1560316"
+        }
+      },
+      "frozen_t1_implementation_sha256_before_evaluation": {
+        "detectors.py": "a1bbc7577f341308da48741065d22e2206d9932bfd4381b8430e36aa90b05bfb",
+        "machine_verifier_config_v1.json": "b7ad7810170282490f14dfd6fb8c947ab61a6f2155884df447d289dc175285c7",
+        "quality_gates.py": "fe465e8407d50b4b1174933ff85ac9dd7246a397f924a8f35929a5e7970dc39a",
+        "rules.py": "885429510e37e8be22a43ad928ef85d09d19a1e4f53931c6a555daa9a1be0297",
+        "validation/common.py": "5d09f18db3ce5aa1ff43b6c7dfd9d6c9a533af318c5f66176200c06fafc918b0"
+      },
+      "license": {
+        "dataset": "CC BY-NC-SA 4.0 International",
+        "scorer_and_baseline": "MIT"
+      },
+      "n_sentences": 1750,
+      "official_source": "https://github.com/amirveyseh/AAAI-21-SDU-shared-task-1-AI",
+      "repository_commit_sha": "9e810512b98e1cf034e757d92136c7e64f840d0f",
+      "role": "external_verifier_validation",
+      "split": "official test + truth.json"
+    },
+    "evaluation_metrics": {
+      "current_rule_policy": "frozen parenthetical acronym-long-form regex plus frozen alignment; no SciAI-driven modification or subtype filtering",
+      "dataset": "SciAI: Scientific Acronym Identification",
+      "gold_long_forms": 1676,
+      "gold_short_forms": 3159,
+      "long_form": {
+        "correct": 1199,
+        "f1": 0.8212328767123288,
+        "gold": 1676,
+        "precision": 0.9638263665594855,
+        "predicted": 1244,
+        "recall": 0.7153937947494033
+      },
+      "n_sentences": 1750,
+      "official_macro": {
+        "f1": 0.7054261955207587,
+        "precision": 0.9762816466747548,
+        "recall": 0.552220480787174
+      },
+      "official_schwartz_hearst_baseline_same_split": {
+        "long_form": {
+          "correct": 1079,
+          "f1": 0.7723693629205439,
+          "gold": 1676,
+          "precision": 0.9651162790697675,
+          "predicted": 1118,
+          "recall": 0.6437947494033412
+        },
+        "official_macro": {
+          "f1": 0.8409357576273297,
+          "precision": 0.9131302491892341,
+          "recall": 0.7793206099026836
+        },
+        "readme_reference_macro": {
+          "f1": 0.8546,
+          "precision": 0.9322,
+          "recall": 0.789
+        },
+        "short_form": {
+          "correct": 2890,
+          "f1": 0.8871834228702993,
+          "gold": 3159,
+          "precision": 0.8611442193087009,
+          "predicted": 3356,
+          "recall": 0.9148464704020259
+        }
+      },
+      "pair_metric": {
+        "reason": "official BIO labels identify short and long entity spans but provide no relation links",
+        "status": "PAIR_METRIC_NOT_IDENTIFIABLE_FROM_OFFICIAL_SCHEMA"
+      },
+      "predicted_long_forms": 1244,
+      "predicted_short_forms": 1243,
+      "prediction_sha256": "d835aaac646643c7b7d25bd8c0dcfc9118e8b897a1177e8f30b59bbc8950be7d",
+      "role": "external_verifier_validation",
+      "short_form": {
+        "correct": 1229,
+        "f1": 0.558382553384825,
+        "gold": 3159,
+        "precision": 0.9887369267900241,
+        "predicted": 1243,
+        "recall": 0.3890471668249446
+      },
+      "split": "official test with truth.json labels",
+      "status": "OK"
+    },
+    "implementation_sha256_frozen_before_evaluation": {
+      "detectors.py": "a1bbc7577f341308da48741065d22e2206d9932bfd4381b8430e36aa90b05bfb",
+      "machine_verifier_config_v1.json": "b7ad7810170282490f14dfd6fb8c947ab61a6f2155884df447d289dc175285c7",
+      "quality_gates.py": "fe465e8407d50b4b1174933ff85ac9dd7246a397f924a8f35929a5e7970dc39a",
+      "rules.py": "885429510e37e8be22a43ad928ef85d09d19a1e4f53931c6a555daa9a1be0297",
+      "validation/common.py": "5d09f18db3ce5aa1ff43b6c7dfd9d6c9a533af318c5f66176200c06fafc918b0"
+    },
+    "rules_modified_using_sciai": false,
+    "verification_scope": "external_gold_calibrated_rule"
+  },
+  "T1b_EXPLICIT_DEFINITION": {
+    "external_gold_task_equivalence": false,
+    "limitation": "SciAI validates acronym/long-form identification, not generic explicit scientific definitions",
+    "verification_scope": "deterministic_rule_verified_only"
+  },
+  "T2": {
+    "frozen_config": {
+      "answer_uniqueness_rule": "reject when the anchor contains more than one distinct strict numeric expression with the same normalized unit/operator class",
+      "requirements": [
+        "hard_gate_pass",
+        "exact_answer_span",
+        "numeric_normalization",
+        "unit_preservation",
+        "semantic_local_context",
+        "unique_raw_roundtrip",
+        "answer_uniqueness_check"
+      ],
+      "roundtrip": "stored answer must occur exactly once, and normalized answer exactly once, in evidence_raw"
+    },
+    "unchanged_from_v1": true
+  },
+  "T2_modified": false,
+  "T3": {
+    "NLI": {
+      "aggregate_sha256": "10eafd892330003f984cb87db8d3670e4342c1e3a8a50dc762d3893cd177af7e",
+      "batch_size": 16,
+      "device": "cuda",
+      "dtype": "float16",
+      "files": {
+        "README.md": {
+          "bytes": 7580,
+          "sha256": "216c3ac9ea77beec4e35a347c8b4edc47fbb3465e7c2a00dc923ae7b975cf346"
+        },
+        "added_tokens.json": {
+          "bytes": 18,
+          "sha256": "cd0141b19e809eb963a8f8244fad72530233f729e1f6960d281e1fbb3537b2fb"
+        },
+        "config.json": {
+          "bytes": 1056,
+          "sha256": "7f9d420b616691c5b575bab8839719aefbddc656d8e1316519414b097ce43e3d"
+        },
+        "model.safetensors": {
+          "bytes": 870182606,
+          "sha256": "c03cd208bf920b4fbbb182a0535859a566e8acc3477d2b536bf87b769978524b"
+        },
+        "special_tokens_map.json": {
+          "bytes": 156,
+          "sha256": "fcfbeb4e25cd37fb5b8030406394253b245230fd3b552750092bab7d24d827da"
+        },
+        "spm.model": {
+          "bytes": 2464616,
+          "sha256": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd"
+        },
+        "tokenizer.json": {
+          "bytes": 8648889,
+          "sha256": "7aa118770f066a74530d161c7d0b994d0629cc0ff3a0df213f184192773f960a"
+        },
+        "tokenizer_config.json": {
+          "bytes": 395,
+          "sha256": "556a192d83e3edb45a09a6207095dd9295c3b2279062e5cc430feac4cb7a0817"
+        }
+      },
+      "inference_only": true,
+      "label_mapping": {
+        "0": "entailment",
+        "1": "neutral",
+        "2": "contradiction"
+      },
+      "local_path": "aicorpus-data\\external_models\\DeBERTa-v3-large-mnli-fever-anli-ling-wanli_b3546ea",
+      "max_length": 512,
+      "model_revision": "b3546ea6b0346eb6f8d5d68b13c7dc6d0376b3d7",
+      "premise_hypothesis_order": "tokenizer(premise, hypothesis)",
+      "repo_id": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+      "tokenizer_revision": "b3546ea6b0346eb6f8d5d68b13c7dc6d0376b3d7",
+      "training": false,
+      "truncation": "longest_first"
+    },
+    "aggregate": {
+      "deterministic_gate_reject_rate": 0.7450076804915514,
+      "evaluation_name": "FULL_COMBINED_VERIFIER_REJECT_RATE",
+      "full_combined_verifier_reject_rate": 0.7457757296466974,
+      "legacy_previous": {
+        "n": 593,
+        "name": "NLI_OR_PREVIOUS_STRESS_METRIC",
+        "value": 0.6610455311973018
+      },
+      "n_variants": 1302,
+      "nli_reject_rate": 0.521505376344086,
+      "semantic_role_verifier_available": false,
+      "subject_object_swap_interpretation": "combined rejection relies on frozen NLI only; no reliable deterministic semantic-role verifier is claimed",
+      "variant_set_sha256": "a9e31f164aca3f0c86f546a6b072b52b10f12c92f1dcae9fa72854f0c1aaec33"
+    },
+    "candidate_decisions_unchanged_from_v1": true,
+    "combined_counterfactual_definition": {
+      "NLI_rejection": "entailment score below frozen SciFact threshold",
+      "higher_lower_flip": "NLI OR frozen relation/polarity preservation",
+      "increase_decrease_flip": "NLI OR frozen relation/polarity preservation",
+      "negation_flip": "NLI OR evidence-relative negation consistency",
+      "numeric_perturbation": "NLI OR exact recognized numeric-condition preservation",
+      "subject_object_swap": "NLI only; no reliable deterministic semantic-role verifier is claimed",
+      "uncertainty_removal": "NLI OR evidence-relative uncertainty preservation"
+    },
+    "frozen_scifact_and_nli_config": {
+      "heldout_gate_minimums": {
+        "f0.5": 0.7,
+        "precision": 0.7
+      },
+      "heldout_reporting_split": "SciFact dev",
+      "requirements": [
+        "hard_gate_pass",
+        "entailment_at_or_above_frozen_threshold",
+        "negation_consistency",
+        "uncertainty_consistency",
+        "recognized_condition_span_preservation"
+      ],
+      "selected_entailment_threshold": 0.007826457731425762,
+      "selection_split": "SciFact train"
+    },
+    "legacy_stress_metric": {
+      "n": 593,
+      "name": "NLI_OR_PREVIOUS_STRESS_METRIC",
+      "value": 0.6610455311973018
+    }
+  },
+  "candidate_detection_rerun": false,
+  "code_sha256": {
+    "run_machine_validation_repair_v1_1.py": "d969b6dc2d5613b4d5c44c8ff9ae62b438ae3517eed54a51e9257a946635a666"
+  },
+  "created_date": "2026-08-12",
+  "experiment": "corpus_v1_sft_a_machine_validation_v1_1",
+  "frozen_parent": {
+    "config_sha256": "b7ad7810170282490f14dfd6fb8c947ab61a6f2155884df447d289dc175285c7",
+    "directory": "aicorpus-derived\\experiments\\corpus_v1\\sft_a\\machine_validation_v1",
+    "hashes": {
+      "calibration_v1/candidates.parquet": "74c96f8f0c68afa9caecb9906ddd3b504ebad8c31448fb845fcd25660787f755",
+      "calibration_v1/holdout1900_manifest.csv": "6ab748e1a5348805bb57b874ead801c56b7d33a607fe2d52add490984dda289b",
+      "calibration_v1/paper_features_cal100.csv": "841c88c1c6493057cdb4a5d4c0dd0dd5c042ffc43f440b8b617445226a0629e2",
+      "machine_validation_v1/cal100_machine_verified.parquet": "23abbae683e5e8fdb41634b97fcf21044cc6d80a878a02178b017c13273cdb4e",
+      "machine_validation_v1/counterfactual_metrics.csv": "95bad9296063f3883bf923d82bd93485899a2c6f7b7b1d82af3f3d3a8d800610",
+      "machine_validation_v1/summary.json": "a92db527b838d8f9d681e817cc20f26f05cb830d5cb335013974bad26be4fc1c"
+    }
+  },
+  "generative_LLM_judge": false,
+  "holdout1900_processed": 0,
+  "readiness_assessment": {
+    "no_parameter_or_rule_tuning": true,
+    "systematic_failure": false,
+    "t1_precision_oriented_support": true,
+    "t3_critical_combined_categories_all_nonempty_and_fully_rejected": true,
+    "t3_original_claim_integrity_blocker": false
+  },
+  "scope": "repair only: SciAI external T1a validation and typed T3 combined-verifier stress diagnosis"
+}

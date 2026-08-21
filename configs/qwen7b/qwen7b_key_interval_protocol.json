@@ -1,0 +1,275 @@
+{
+  "conditions": {
+    "T1a_ACRONYM": [
+      1000,
+      2000
+    ],
+    "T2_NUMERIC": [
+      3000,
+      3678
+    ],
+    "T3_CLAIM": [
+      2000,
+      2286
+    ]
+  },
+  "does_not_redefine_n_star": true,
+  "environment": {
+    "cuda_version": "12.8",
+    "cudnn_version": 90701,
+    "gpu_model": "NVIDIA GeForce RTX 5090 Laptop GPU",
+    "gpu_total_memory_bytes": 25650855936,
+    "peft_version": "0.15.2",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python_version": "3.10.20 (main, Mar 24 2026, 22:57:16) [MSC v.1944 64 bit (AMD64)]",
+    "pytorch_version": "2.7.1+cu128",
+    "transformers_version": "4.51.3"
+  },
+  "evaluation": {
+    "eval_batch_size": 4,
+    "eval_instances": {
+      "T1a_ACRONYM": 300,
+      "T2_NUMERIC": 300,
+      "T3_CLAIM": 293
+    },
+    "generation_max_new_tokens": {
+      "T1a_ACRONYM": 32,
+      "T2_NUMERIC": 32,
+      "T3_CLAIM": 160
+    },
+    "greedy": true,
+    "normalization": "identical frozen Qwen2.5-3B RQ3 evaluator",
+    "primary_metric": "NEM",
+    "template": "TEMPLATE_0_PRIMARY"
+  },
+  "evaluation_membership": {
+    "T1a_ACRONYM": {
+      "eval_instance_ids_sha256": "835e08549f2a3d9c914985f775291547718bef985541b3865ea0246c1f231157",
+      "eval_paper_ids_sha256": "2517beedde8b488e01afb3f0ea77323badb4a8610ae3f9517527838d52510a35",
+      "instances": 300,
+      "train_eval_paper_overlap": 0,
+      "unique_papers": 300
+    },
+    "T2_NUMERIC": {
+      "eval_instance_ids_sha256": "6bb607658b764ecf904b975e467a7bf6f2132f56f1cb50ed71c8b0581fbe50a7",
+      "eval_paper_ids_sha256": "83545de3c8c9cb21de7cfa825e1586c6efafa086ee3a10166c7c89c1791924cf",
+      "instances": 300,
+      "train_eval_paper_overlap": 0,
+      "unique_papers": 300
+    },
+    "T3_CLAIM": {
+      "eval_instance_ids_sha256": "69260b3a2892ddde08e710dba780cd85090069d3f296da14252aa5d290f053da",
+      "eval_paper_ids_sha256": "8583e9537e07095b08ac4fdae9f2500a41e8fe3e485836ae3cada5f21f9a652a",
+      "instances": 293,
+      "train_eval_paper_overlap": 0,
+      "unique_papers": 293
+    }
+  },
+  "experiment": "QWEN25_7B_KEY_INTERVAL_MODEL_SCALE_SENSITIVITY",
+  "formal_runs": 18,
+  "frozen_parent_manifests": {
+    "C2_checksums_sha256": "8925d562c8099e96db693a9e56b462e80d9492247231ef2d8e99aaad6ea2ff03",
+    "C3_checksums_sha256": "027a3ed669993fbe14d4cc9195d84bae90632b0a3cc7df15f64a60f181d94e8e",
+    "Phi_checksums_sha256": "0830c9dabf4be3c952696e9cb9ce40b0c15721e5cd398f1e1949f4ed56eb02c0"
+  },
+  "lora": {
+    "alpha": 32,
+    "dropout": 0.05,
+    "r": 16,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ]
+  },
+  "membership": {
+    "T1a_ACRONYM": {
+      "1000": {
+        "instances": 1000,
+        "target_truncation_count": 0,
+        "train_instance_ids_sha256": "eb0b94e4518785c3b46de298d479e0c9788fe3cb06f88e3f1c457120ef78f56d",
+        "train_paper_ids_sha256": "a85a532cc26eb3ed4f6a61ec0b620b8466e490951614844d681f149feaacf368",
+        "unique_papers": 1000
+      },
+      "2000": {
+        "instances": 2000,
+        "target_truncation_count": 0,
+        "train_instance_ids_sha256": "1ebfc5eb588c7e21fbe0b1a663f30aa318c4a50372a535032291cecac1c41e7b",
+        "train_paper_ids_sha256": "df5ba8f1b91d34411fd7e8913aa55de7eabfa60e24b85542658c408752a119fd",
+        "unique_papers": 1392
+      }
+    },
+    "T2_NUMERIC": {
+      "3000": {
+        "instances": 3000,
+        "target_truncation_count": 0,
+        "train_instance_ids_sha256": "d33748e98ccd512e594ba617bf27ab75a452347bddbc73162e17110727c71d52",
+        "train_paper_ids_sha256": "716794075a1dde0fcbc96bcb4f26db5a543906e3da24db90d0250f5479bb1474",
+        "unique_papers": 1374
+      },
+      "3678": {
+        "instances": 3678,
+        "target_truncation_count": 0,
+        "train_instance_ids_sha256": "3bff3edf72d8d853d38807020f3355e68c51d6ab7ef705abf2da9c9260e94c04",
+        "train_paper_ids_sha256": "716794075a1dde0fcbc96bcb4f26db5a543906e3da24db90d0250f5479bb1474",
+        "unique_papers": 1374
+      }
+    },
+    "T3_CLAIM": {
+      "2000": {
+        "instances": 2000,
+        "target_truncation_count": 0,
+        "train_instance_ids_sha256": "c685aa7d162df48c6a1ebd5db04ae700ecc53fbb54939f850a89bc6ee37f9b03",
+        "train_paper_ids_sha256": "4826ea834d25622f47bb6949c989b4ee209086147fe5d8e9374981b55fc9f4fb",
+        "unique_papers": 1101
+      },
+      "2286": {
+        "instances": 2286,
+        "target_truncation_count": 0,
+        "train_instance_ids_sha256": "a9390c816c5315402c6e74ffde4c94b4492345d95ef714d7c54cdb329241c037",
+        "train_paper_ids_sha256": "4826ea834d25622f47bb6949c989b4ee209086147fe5d8e9374981b55fc9f4fb",
+        "unique_papers": 1101
+      }
+    }
+  },
+  "memory_implementation": {
+    "base_fp16_peak_allocated_bytes_load_test": 15276322304,
+    "effective_batch_size_unchanged": 8,
+    "eval_batch_size_same_as_3B": 4,
+    "gradient_accumulation_changed_from_3B": [
+      4,
+      8
+    ],
+    "gradient_checkpointing": true,
+    "micro_batch_size_changed_from_3B": [
+      2,
+      1
+    ],
+    "pre_formal_resource_probe_archives": [
+      "<LOCAL_PATH_OMITTED>",
+      "<LOCAL_PATH_OMITTED>"
+    ],
+    "reason": "7B FP16 base allocation plus WDDM resident memory leaves insufficient safe margin for micro-batch 2; a pre-formal runner probe exposed and corrected a stale training-model reference before any formal result was committed",
+    "scientific_recipe_changed": false
+  },
+  "model": {
+    "architecture": "Qwen2ForCausalLM",
+    "asset_sha256": {
+      "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+      "generation_config.json": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "model-00001-of-00004.safetensors": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7",
+      "model-00002-of-00004.safetensors": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185",
+      "model-00003-of-00004.safetensors": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5",
+      "model-00004-of-00004.safetensors": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd",
+      "model.safetensors.index.json": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "attention_heads": 28,
+    "attention_implementation": "sdpa",
+    "downloaded_once_then_local_only": true,
+    "dtype": "float16",
+    "hidden_size": 3584,
+    "key_value_heads": 4,
+    "layer_count": 28,
+    "license": "Apache-2.0",
+    "local_files_only": true,
+    "local_path": "<LOCAL_PATH_OMITTED>",
+    "model_type": "qwen2",
+    "official_chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+    "official_huggingface_repository": true,
+    "parameter_count": 7615616512,
+    "quantization": "none",
+    "repository_id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "tokenizer_class": "Qwen2TokenizerFast",
+    "tokenizer_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  "not_full_scaling_curve": true,
+  "parent_run_config_sha256_by_seed": {
+    "T1a_ACRONYM|1000": [
+      "d465a71f5e6276ef3a91a05b9c128ff92e67ebf37d55cb36043d19440d0ca8ee",
+      "365e859df4a3071f756d484794904d9584b69e4722b8b1ca37774a7aef503bce",
+      "eaf0ef8a1c039a064fcb488fec825abcd44a14cbc2bd63203b9c7122ad0f9405"
+    ],
+    "T1a_ACRONYM|2000": [
+      "6b76a28c8fa366e24f60795c0ac9d3d8e9c243775e4b7d866f365a7d3098ec84",
+      "744b977a3e73a4382586f210a739ad3bea22b1818937d25455927821c5fce735",
+      "246ab648c79113bfc00b7e5182eb52574a5f8e8d5b9afe9299ed88f13df956e5"
+    ],
+    "T2_NUMERIC|3000": [
+      "3c21293fb627ca7ec839bb339a6a60af1bf52e947a54a9feff9391eacd57d4aa",
+      "dad7491b808267585a8ad913970596255171eaaccd7058ab5b619fd04891ab7e",
+      "c67c7276fc46cf81d93916b6abdf459c1f7c0b4300e75b36a4c9f0ea8aeda0e4"
+    ],
+    "T2_NUMERIC|3678": [
+      "342f1f6274f84411014de0113d47d149148c41a54826ca341ceb1c01f786871c",
+      "41368eaee21e906f74655a24fb40add0b2c298580ed56cda414e92ef0bad4dab",
+      "b2019f641ed33905ac50c9c0a87c174c6209120601c4529a85432d0bdc54ed59"
+    ],
+    "T3_CLAIM|2000": [
+      "ab65b9fbd2cecfd75e09eec5ab7904aa5d4ded34c3fb17f2c9a81d270766f63c",
+      "3bfdfba92e928ba6d1dd1073d2776862be00fc6f290f91f7a5aabc4f91129e8b",
+      "0b9eab73ecb363bfe09af93340b2695927789568963aeb646440f1bb13dbdb10"
+    ],
+    "T3_CLAIM|2286": [
+      "09148ffa05858d51893dba562b927a2f33d00893958e8d4b040921d3a280269c",
+      "11d3499fbcaf6719fabc690691ac209092d54df7e0b39f16c4b5890898bf153e",
+      "0274bd35cde1aa4d6f7f3488c3ac020e7f3c2513d5ca06c240eecbc6fe48fc42"
+    ]
+  },
+  "prohibited": [
+    "resampling or rematerialization",
+    "new tasks or scales",
+    "modification of Qwen2.5-3B or Phi results",
+    "quantization or QLoRA",
+    "performance-based tuning",
+    "paper modification"
+  ],
+  "research_role": "within_family_parameter_scale_sensitivity_key_interval_replication",
+  "seeds": [
+    42,
+    314159,
+    271828
+  ],
+  "smoke": {
+    "adapter_retained": false,
+    "development_only": true,
+    "formal_fresh_base_required": true,
+    "optimizer_steps": 8,
+    "scale": 1000,
+    "seed": 42,
+    "task": "T1a_ACRONYM"
+  },
+  "statistics": {
+    "criterion": "one-sided UCB95(large-small) <= delta",
+    "difference": "large_minus_small",
+    "hierarchical_bootstrap": 10000,
+    "inner": "paired frozen Eval example",
+    "outer": "training seed",
+    "practical_equivalence_delta_nem": 0.02
+  },
+  "status": "frozen_before_smoke_and_formal_training",
+  "training": {
+    "assistant_only_loss": true,
+    "effective_batch_size": 8,
+    "epochs": 3,
+    "fixed_epoch_protocol": true,
+    "gradient_accumulation": 8,
+    "gradient_checkpointing": true,
+    "learning_rate": 0.0002,
+    "max_grad_norm": 1.0,
+    "max_sequence_length": 1280,
+    "micro_batch_size": 1,
+    "optimizer": "AdamW",
+    "precision": "float16",
+    "scheduler": "linear",
+    "seed": 42,
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.0
+  }
+}

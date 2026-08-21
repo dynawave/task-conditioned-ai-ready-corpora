@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+*.log
+cache/
+tmp/
+models/
+checkpoints/
+wandb/
+figures/regenerated/
+.DS_Store
+Thumbs.db

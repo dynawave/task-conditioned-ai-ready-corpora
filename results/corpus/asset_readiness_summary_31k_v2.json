@@ -1,0 +1,381 @@
+{
+  "audit_id": "post_mineru_asset_readiness_audit_31k_v2",
+  "version": "2.0.0",
+  "scope": {
+    "paper_count": 30900,
+    "central_evidence": "aicorpus-derived/mineru/mineru_evidence_31k.jsonl",
+    "raw_mineru_root": "aicorpus-data/mineru_core_31k",
+    "mode": "full_corpus"
+  },
+  "definitions": {
+    "r0": "MinerU parsed/detected the object",
+    "r1": "stable object ID plus paper_id, source/provenance and page/location; bbox/poly and exact-text match are reported separately and are not universal R1 hard conditions",
+    "r2": "object linked to its modality-specific necessary context: text section/context; figure section plus caption or body mention; table structure plus section and caption or body context; formula section plus nearby explanatory text",
+    "r3": "all hard prerequisites of a stated Task–Evidence Affordance task demonstrably verified; rule candidates are never R3",
+    "not_a_quality_score": true
+  },
+  "corpus": {
+    "papers": 30900,
+    "gate0_records_found": 30900,
+    "gate0_technical_eligible": 30883,
+    "gate0_technical_ineligible": 17,
+    "paragraphs": 3336769
+  },
+  "text": {
+    "paragraph_field_coverage": {
+      "valid_paragraphs": {
+        "count": 3336769,
+        "percent_of_paragraphs": 100.0
+      },
+      "body_paragraphs": {
+        "count": 3279426,
+        "percent_of_paragraphs": 98.2815
+      },
+      "section_context": {
+        "count": 3336769,
+        "percent_of_paragraphs": 100.0
+      },
+      "page": {
+        "count": 3336769,
+        "percent_of_paragraphs": 100.0
+      },
+      "bbox_poly": {
+        "count": 1993675,
+        "percent_of_paragraphs": 59.7487
+      },
+      "exact_provenance": {
+        "count": 1993675,
+        "percent_of_paragraphs": 59.7487
+      },
+      "context_neighbor": {
+        "count": 3215620,
+        "percent_of_paragraphs": 96.3693
+      }
+    },
+    "paper_readiness": {
+      "r0": {
+        "count": 30883,
+        "percent_of_r0": 100.0
+      },
+      "r1": {
+        "count": 30883,
+        "percent_of_r0": 100.0
+      },
+      "r2": {
+        "count": 30883,
+        "percent_of_r0": 100.0
+      },
+      "r3": {
+        "count": 0,
+        "percent_of_r0": 0.0
+      }
+    },
+    "evidence_package": {
+      "r1_paragraphs": 3336769,
+      "r2_paragraphs": 3336769,
+      "r3_task_complete_paragraphs": 0,
+      "potential_multi_evidence_structure_candidates": 3215620,
+      "limitation": "same-section neighbor structure is a candidate condition only; semantic relatedness, entity extraction, claim detection and condition extraction are not inferred"
+    }
+  },
+  "assets": {
+    "figure": {
+      "stages": {
+        "r0": {
+          "count": 528198,
+          "percent_of_r0": 100.0
+        },
+        "r1": {
+          "count": 528198,
+          "percent_of_r0": 100.0
+        },
+        "r2": {
+          "count": 276852,
+          "percent_of_r0": 52.4144
+        },
+        "r3": {
+          "count": 0,
+          "percent_of_r0": 0.0
+        }
+      },
+      "observed_fields": {
+        "source_path_declared": {
+          "count": 528198,
+          "percent_of_r0": 100.0
+        },
+        "image_file_readable": {
+          "count": 0,
+          "percent_of_r0": 0.0
+        },
+        "bbox": {
+          "count": 528198,
+          "percent_of_r0": 100.0
+        },
+        "caption": {
+          "count": 291002,
+          "percent_of_r0": 55.0934
+        },
+        "body_mention": {
+          "count": 158088,
+          "percent_of_r0": 29.9297
+        },
+        "section_link": {
+          "count": 491731,
+          "percent_of_r0": 93.096
+        },
+        "caption_body_link": {
+          "count": 158088,
+          "percent_of_r0": 29.9297
+        },
+        "panel_direct": {
+          "count": 0,
+          "percent_of_r0": 0.0
+        },
+        "axis_direct": {
+          "count": 0,
+          "percent_of_r0": 0.0
+        },
+        "legend_direct": {
+          "count": 0,
+          "percent_of_r0": 0.0
+        },
+        "unit_rule_candidate": {
+          "count": 40055,
+          "percent_of_r0": 7.5833
+        }
+      }
+    },
+    "table": {
+      "stages": {
+        "r0": {
+          "count": 79751,
+          "percent_of_r0": 100.0
+        },
+        "r1": {
+          "count": 79751,
+          "percent_of_r0": 100.0
+        },
+        "r2": {
+          "count": 65044,
+          "percent_of_r0": 81.5589
+        },
+        "r3": {
+          "count": 0,
+          "percent_of_r0": 0.0
+        }
+      },
+      "observed_fields": {
+        "source_path_declared": {
+          "count": 79751,
+          "percent_of_r0": 100.0
+        },
+        "image_file_readable": {
+          "count": 0,
+          "percent_of_r0": 0.0
+        },
+        "bbox": {
+          "count": 79751,
+          "percent_of_r0": 100.0
+        },
+        "caption": {
+          "count": 69032,
+          "percent_of_r0": 86.5594
+        },
+        "footnote": {
+          "count": 20704,
+          "percent_of_r0": 25.9608
+        },
+        "body_mention": {
+          "count": 50264,
+          "percent_of_r0": 63.0262
+        },
+        "section_link": {
+          "count": 73209,
+          "percent_of_r0": 91.797
+        },
+        "html": {
+          "count": 76431,
+          "percent_of_r0": 95.837
+        },
+        "html_parseable": {
+          "count": 76431,
+          "percent_of_r0": 95.837
+        },
+        "rectangular": {
+          "count": 39109,
+          "percent_of_r0": 49.0389
+        },
+        "header_candidate": {
+          "count": 76381,
+          "percent_of_r0": 95.7743
+        },
+        "multi_level_header_candidate": {
+          "count": 36961,
+          "percent_of_r0": 46.3455
+        },
+        "unit_string_candidate": {
+          "count": 29292,
+          "percent_of_r0": 36.7293
+        },
+        "lookup_structural_candidate": {
+          "count": 25367,
+          "percent_of_r0": 31.8078
+        },
+        "reasoning_structural_candidate": {
+          "count": 9574,
+          "percent_of_r0": 12.0049
+        }
+      }
+    },
+    "formula": {
+      "stages": {
+        "r0": {
+          "count": 110563,
+          "percent_of_r0": 100.0
+        },
+        "r1": {
+          "count": 110563,
+          "percent_of_r0": 100.0
+        },
+        "r2": {
+          "count": 106933,
+          "percent_of_r0": 96.7168
+        },
+        "r3": {
+          "count": 0,
+          "percent_of_r0": 0.0
+        }
+      },
+      "observed_fields": {
+        "latex": {
+          "count": 110563,
+          "percent_of_r0": 100.0
+        },
+        "source_path_declared": {
+          "count": 110563,
+          "percent_of_r0": 100.0
+        },
+        "image_file_readable": {
+          "count": 0,
+          "percent_of_r0": 0.0
+        },
+        "bbox": {
+          "count": 110563,
+          "percent_of_r0": 100.0
+        },
+        "formula_number": {
+          "count": 92774,
+          "percent_of_r0": 83.9105
+        },
+        "nearby_text": {
+          "count": 106933,
+          "percent_of_r0": 96.7168
+        },
+        "section_link": {
+          "count": 106933,
+          "percent_of_r0": 96.7168
+        },
+        "symbol_definition_candidate": {
+          "count": 32814,
+          "percent_of_r0": 29.679
+        },
+        "unit_string_candidate": {
+          "count": 47140,
+          "percent_of_r0": 42.6363
+        },
+        "assumption_condition_candidate": {
+          "count": 54596,
+          "percent_of_r0": 49.38
+        },
+        "grounding_structural_candidate": {
+          "count": 32814,
+          "percent_of_r0": 29.679
+        },
+        "reasoning_structural_candidate": {
+          "count": 28920,
+          "percent_of_r0": 26.157
+        }
+      }
+    }
+  },
+  "payload_availability": {
+    "text": {
+      "text_payload": {
+        "source_payload_available": "not_separately_audited",
+        "local_audit_payload_available": {
+          "count": 3336769,
+          "total": 3336769,
+          "status": "available"
+        }
+      }
+    },
+    "figure": {
+      "image_payload": {
+        "source_payload_available": "unknown_not_audited",
+        "local_audit_payload_available": {
+          "count": 0,
+          "total": 528198,
+          "status": "not_available_in_local_core_package"
+        }
+      }
+    },
+    "table": {
+      "html_payload": {
+        "source_payload_available": "not_separately_audited",
+        "local_audit_payload_available": {
+          "count": 76431,
+          "total": 79751,
+          "status": "available_when_html_present"
+        }
+      },
+      "table_image_payload": {
+        "source_payload_available": "unknown_not_audited",
+        "local_audit_payload_available": {
+          "count": 0,
+          "total": 79751,
+          "status": "not_available_in_local_core_package"
+        }
+      }
+    },
+    "formula": {
+      "latex_payload": {
+        "source_payload_available": "not_separately_audited",
+        "local_audit_payload_available": {
+          "count": 110563,
+          "total": 110563,
+          "status": "available_when_latex_present"
+        }
+      },
+      "formula_image_payload": {
+        "source_payload_available": "unknown_not_audited",
+        "local_audit_payload_available": {
+          "count": 0,
+          "total": 110563,
+          "status": "not_available_in_local_core_package"
+        }
+      }
+    }
+  },
+  "r3_interpretation": {
+    "figure": "0 because T17 requires verified readable axis/legend/unit information; no vision/OCR inference was run",
+    "table": "0 because T19 requires resolved unique header paths and unit scope; HTML rules cannot prove these semantics",
+    "formula": "0 because T21 requires evidence-linked symbol definitions; lexical cues cannot prove semantic linkage",
+    "text": "structural candidates are reported separately; task-specific entity/claim/condition/semantic-link prerequisites remain unobserved"
+  },
+  "integrity": {
+    "all_raw_objects_have_unique_paper_scoped_deterministic_ids": true,
+    "unique_object_ids": 718512,
+    "all_stage_chains_monotonic": true,
+    "source_json_missing_or_unreadable": {},
+    "raw_object_count": 718512,
+    "adapter_comparability": "figure uses raw source image+chart objects, matching the adapter's source-level figure policy; table/formula use raw source table/equation objects"
+  },
+  "limitations": [
+    "No object text, image, HTML or formula corpus copy is emitted.",
+    "Caption-reference matching uses explicit conventional labels only.",
+    "Page-level section association is structural and not a semantic caption-body interpretation.",
+    "Rule hits for units, symbol definitions and assumptions are candidate signals, not validated links.",
+    "No QA, instruction, KG, embedding, routing, clustering or training is performed."
+  ],
+  "runtime_seconds": 228.267
+}

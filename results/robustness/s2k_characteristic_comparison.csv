@@ -1,0 +1,21 @@
+absolute_proportion_difference,availability_status,remainder_mean_or_proportion,remainder_median,remainder_missing_n,remainder_n_nonmissing,s2k_mean_or_proportion,s2k_median,s2k_missing_n,s2k_n_nonmissing,smd,unit_or_definition,variable,variable_type
+,AVAILABLE_PERSISTED_PRE_TASK,15.4523075857771,13,0,28883,15.5175,13,0,2000,0.006197567937184377,pages,page_count,continuous
+,AVAILABLE_PERSISTED_PRE_TASK,108.01232558944707,98,0,28883,108.5245,97,0,2000,0.00858773282152285,paragraphs,paragraph_count,continuous
+,AVAILABLE_PERSISTED_PRE_TASK,16.470380500640516,16,0,28883,16.249,15,0,2000,-0.026946970265790165,sections,section_count,continuous
+,AVAILABLE_PERSISTED_PRE_TASK,16.700087999301232,13.934426229508198,0,28883,16.570055283857428,13.698630136986301,0,2000,-0.010026875857363737,objects_per_100_paragraphs,figure_density_per_100_paragraphs,continuous
+,AVAILABLE_PERSISTED_PRE_TASK,2.503028948231991,1.8518518518518519,0,28883,2.5816967179999555,1.8691588785046729,0,2000,0.027648592725979845,objects_per_100_paragraphs,table_density_per_100_paragraphs,continuous
+,AVAILABLE_PERSISTED_PRE_TASK,3.037289599106512,0,0,28883,3.306206767544895,0,0,2000,0.024380672266834838,objects_per_100_paragraphs,formula_density_per_100_paragraphs,continuous
+,AVAILABLE_PERSISTED_PRE_TASK,2.9011529273274936,3,0,28883,2.91,3,0,2000,0.007659944991142414,recognized_headings,recognized_heading_count,continuous
+0.000971990444205928,AVAILABLE_PERSISTED_PRE_TASK,0.47702800955579405,,0,28883,0.478,,0,2000,,proportion,has_abstract,binary
+0.007614098258491131,AVAILABLE_PERSISTED_PRE_TASK,0.8616140982584911,,0,28883,0.854,,0,2000,,proportion,has_introduction_background,binary
+0.011454488799639895,AVAILABLE_PERSISTED_PRE_TASK,0.4685455112003601,,0,28883,0.48,,0,2000,,proportion,has_methods_materials,binary
+0.011911851261988016,AVAILABLE_PERSISTED_PRE_TASK,0.33808814873801196,,0,28883,0.35,,0,2000,,proportion,has_results,binary
+0.00003351452411454181,AVAILABLE_PERSISTED_PRE_TASK,0.49596648547588545,,0,28883,0.496,,0,2000,,proportion,has_discussion,binary
+0.006938683654745037,AVAILABLE_PERSISTED_PRE_TASK,0.736938683654745,,0,28883,0.73,,0,2000,,proportion,has_conclusion,binary
+,NOT_PERSISTED_FOR_FULL_30883_POOL_NO_IMPUTATION,,,28883,0,,,2000,0,,frozen tokenizer token count,source_tokens,not_available
+,NOT_PERSISTED_FOR_FULL_30883_POOL_NO_IMPUTATION,,,28883,0,,,2000,0,,frozen tokenizer tokens per paragraph,average_paragraph_length,not_available
+,NOT_PERSISTED_FOR_FULL_30883_POOL_NO_IMPUTATION,,,28883,0,,,2000,0,,reference-like paragraphs / paragraphs,reference_like_fraction,not_available
+,NOT_PERSISTED_FOR_FULL_30883_POOL_NO_IMPUTATION,,,28883,0,,,2000,0,,any suspected word-split paragraph,suspected_word_split_indicator,not_available
+,NOT_PERSISTED_FOR_FULL_30883_POOL_NO_IMPUTATION,,,28883,0,,,2000,0,,year,publication_year,not_available
+,NOT_PERSISTED_FOR_FULL_30883_POOL_NO_IMPUTATION,,,28883,0,,,2000,0,,document type,document_type,not_available
+,NOT_PERSISTED_FOR_FULL_30883_POOL_NO_IMPUTATION,,,28883,0,,,2000,0,,language,language,not_available

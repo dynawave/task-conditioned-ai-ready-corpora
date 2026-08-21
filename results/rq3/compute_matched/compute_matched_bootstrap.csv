@@ -1,0 +1,4 @@
+task,comparison,point_difference,ci95_low,ci95_high,bootstrap_replicates,bootstrap_seed,method
+T1a_ACRONYM,large_compute_matched_minus_small_formal,0.004444444444444473,-0.005555555555555556,0.014444444444444446,10000,SHA256(C4_BOOTSTRAP_V1|task),outer resampling of three training seeds; inner paired resampling of frozen Eval examples
+T2_NUMERIC,large_compute_matched_minus_small_formal,0.004444444444444399,-0.0022222222222222222,0.012222222222222223,10000,SHA256(C4_BOOTSTRAP_V1|task),outer resampling of three training seeds; inner paired resampling of frozen Eval examples
+T3_CLAIM,large_compute_matched_minus_small_formal,0.0614334470989761,0.012514220705346987,0.10466439135381116,10000,SHA256(C4_BOOTSTRAP_V1|task),outer resampling of three training seeds; inner paired resampling of frozen Eval examples

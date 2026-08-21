@@ -1,0 +1,104 @@
+{
+  "experiment_id": "corpus_v1_rag_budget_final_v2",
+  "purpose": "authorized recovery of missing embeddings and rankings for frozen budget evaluation; no experimental-condition change",
+  "supersedes": {
+    "original_budget_at_1024": "superseded_due_to_top10_truncation",
+    "pre_authorization_v2_blocker": true
+  },
+  "frozen_inputs": {
+    "formal_question_count": 1292,
+    "qasper_version": "v0.3 test",
+    "retrieval_results_sha256": "a68dea52bf95250bf93faccdb6e2413bd4da305ec5b5d9b8ac3e7fd9bb532d00",
+    "original_config_sha256": "c4e5719fc603d4652d5e141b934f7d251bc9b82f21ab1281cbc99d9ddd382bf6",
+    "qasper_archive_sha256": "72a52a41193e2838b8074f80ac074b94f956b84886c36a61c58a7df4171bdd72",
+    "gold_mapping": {
+      "total": 5648,
+      "mapped": 5420,
+      "mapping_rate": 0.9596317280453258,
+      "excluded": 228
+    }
+  },
+  "model": {
+    "name": "BAAI/bge-base-en-v1.5",
+    "revision": "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+    "dtype": "float16",
+    "pooling": "CLS",
+    "normalization": "L2",
+    "similarity": "normalized_dot_product",
+    "query_prefix": "Represent this sentence for searching relevant passages: ",
+    "max_tokens": 512,
+    "batch_size": 128
+  },
+  "views": {
+    "B1": "unchanged frozen Fixed 512/64",
+    "B2": "unchanged frozen Atomic",
+    "B3": "unchanged frozen one-hop SEP"
+  },
+  "embedding_storage": {
+    "format": "npy",
+    "dtype": "float32",
+    "index": "deterministic per-paper contiguous row ranges plus persisted unit ordering"
+  },
+  "ranking": {
+    "scope": "paper_scoped",
+    "ranking_storage": "all candidates per query in Parquet",
+    "max_budget": 2048,
+    "prefix_rule": "stop before next whole unit would exceed budget"
+  },
+  "statistics": {
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260812,
+    "holm_family": "9 primary BudgetCES pairwise tests across three budgets"
+  },
+  "runner_sha256": "fd319c9a7038b127e0fe80eeb657e121ae684698849cf0c56af7835e07ce5312",
+  "persisted_assets": {
+    "query_embeddings.npy": {
+      "shape": [
+        1292,
+        768
+      ],
+      "dtype": "float32",
+      "sha256": "94616121155fa02da13a3e73fd9ebbcf844bd14e22404f64973b3d6937c4d56e"
+    },
+    "B1_corpus_embeddings.npy": {
+      "shape": [
+        4580,
+        768
+      ],
+      "dtype": "float32",
+      "sha256": "5923b1f249886650e8b952cccb8188cf2d0a31d3738186334ee45df3528a3f96"
+    },
+    "B2_corpus_embeddings.npy": {
+      "shape": [
+        19425,
+        768
+      ],
+      "dtype": "float32",
+      "sha256": "8eab14960d17fad6579e2cf20143f240a7fb631df4a7fa65169c3c5d77aae3ab"
+    },
+    "B3_corpus_embeddings.npy": {
+      "shape": [
+        19425,
+        768
+      ],
+      "dtype": "float32",
+      "sha256": "caa5bfb47c3c80a6bcdb2c75d60adb75605498eead537b06456a3c89957b249e"
+    },
+    "query_ids.parquet": {
+      "sha256": "9ccdf3a7aea34ff93388d19d2e678e52c487d2c6a70aecb52d6b3bfd1ed0d896"
+    },
+    "B1_unit_ids.parquet": {
+      "sha256": "d8c365ddc1fb2d187f87e32cb3b78abdf5502bc69a8589ca321ddf2e6a636652"
+    },
+    "B2_unit_ids.parquet": {
+      "sha256": "ba2f4c2c0db68d377c3c8489289a9a7194210c2e38480ee92e7034f8e484e1d0"
+    },
+    "B3_unit_ids.parquet": {
+      "sha256": "6707940d48618e8c12047961fd4096c7853cdc8b7164cb36fb4ee7fdda7013d5"
+    },
+    "retrieval_rankings.parquet": {
+      "sha256": "8867b34b29b430d9c4ad74da8461d9320f6b66174762f797261a278fbebb7f59",
+      "row_count": 136390
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "bootstrap_replicates": 10000,
+  "integrity": {
+    "eval_ids_correct": true,
+    "finite_loss": true,
+    "fresh_base": true,
+    "masking_pass": true,
+    "matched_steps": true,
+    "order_hashes_present": true,
+    "same_frozen_membership": true,
+    "target_truncation_zero": true,
+    "train_eval_overlap_zero": true
+  },
+  "new_runs_complete": 9,
+  "new_runs_expected": 9,
+  "sensitivity_only_not_replacement_for_c2_c3": true,
+  "status": "COMPUTE_MATCHED_READY",
+  "t3_incremental286_diagnostic": "POST-HOC_EXPLORATORY_DIAGNOSTIC",
+  "task_results": [
+    {
+      "decision": "MIXED",
+      "large_compute_matched_mean_NEM": 0.9433333333333334,
+      "large_formal_3epoch_mean_NEM": 0.9488888888888889,
+      "large_processed_input_tokens_mean": 1017697.3333333334,
+      "large_scale": 2000,
+      "matched_steps": "[375,375,375]",
+      "small_formal_mean_NEM": 0.9388888888888888,
+      "small_processed_input_tokens_mean": 1033038.0,
+      "small_scale": 1000,
+      "task": "T1a_ACRONYM",
+      "token_budget_difference_percent": -1.4850050691907368,
+      "token_compute_mismatch_warning": false
+    },
+    {
+      "decision": "MIXED",
+      "large_compute_matched_mean_NEM": 0.9933333333333333,
+      "large_formal_3epoch_mean_NEM": 0.9877777777777778,
+      "large_processed_input_tokens_mean": 2733337.0,
+      "large_scale": 3678,
+      "matched_steps": "[1125,1125,1125]",
+      "small_formal_mean_NEM": 0.9888888888888889,
+      "small_processed_input_tokens_mean": 2735670.0,
+      "small_scale": 3000,
+      "task": "T2_NUMERIC",
+      "token_budget_difference_percent": -0.08528075389210299,
+      "token_compute_mismatch_warning": false
+    },
+    {
+      "decision": "UNIQUE_DATA_ADVANTAGE_SUPPORTED",
+      "large_compute_matched_mean_NEM": 0.8657565415244596,
+      "large_formal_3epoch_mean_NEM": 0.9101251422070534,
+      "large_processed_input_tokens_mean": 3657988.0,
+      "large_scale": 2286,
+      "matched_steps": "[750,750,750]",
+      "small_formal_mean_NEM": 0.8043230944254834,
+      "small_processed_input_tokens_mean": 3640149.0,
+      "small_scale": 2000,
+      "task": "T3_CLAIM",
+      "token_budget_difference_percent": 0.49006235733757286,
+      "token_compute_mismatch_warning": false
+    }
+  ],
+  "warnings": [
+    "TOKEN_COMPUTE_MISMATCH_WARNING applies when absolute input-token budget difference exceeds 5%",
+    "TRAINING_STOCHASTICITY_WARNING",
+    "SOURCE_PROVENANCE_AUDIT_WARNING"
+  ]
+}

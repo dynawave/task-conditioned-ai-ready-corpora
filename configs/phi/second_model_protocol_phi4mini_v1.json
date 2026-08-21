@@ -1,0 +1,249 @@
+{
+  "aborted_backup_record": {
+    "artifacts_preserved": true,
+    "excluded_from_C5_Phi_results": true,
+    "repository_id": "Qwen/Qwen2.5-1.5B-Instruct"
+  },
+  "conditions": {
+    "T1a_ACRONYM": [
+      1000,
+      2000
+    ],
+    "T2_NUMERIC": [
+      3000,
+      3678
+    ],
+    "T3_CLAIM": [
+      2000,
+      2286
+    ]
+  },
+  "eval_instance_ids_sha256": {
+    "T1a_ACRONYM": "835e08549f2a3d9c914985f775291547718bef985541b3865ea0246c1f231157",
+    "T2_NUMERIC": "6bb607658b764ecf904b975e467a7bf6f2132f56f1cb50ed71c8b0581fbe50a7",
+    "T3_CLAIM": "69260b3a2892ddde08e710dba780cd85090069d3f296da14252aa5d290f053da"
+  },
+  "evaluation": {
+    "greedy": true,
+    "normalization": "identical frozen Qwen implementation",
+    "official_Phi_chat_template": true,
+    "primary_metric": "NEM",
+    "templates": [
+      "TEMPLATE_0_PRIMARY",
+      "TEMPLATE_1",
+      "TEMPLATE_2"
+    ]
+  },
+  "experiment": "SFT-C5_CROSS_FAMILY_DIRECTIONAL_REPLICATION",
+  "formal_runs": 18,
+  "frozen_parent_manifests": {
+    "C2": "8925d562c8099e96db693a9e56b462e80d9492247231ef2d8e99aaad6ea2ff03",
+    "C3": "027a3ed669993fbe14d4cc9195d84bae90632b0a3cc7df15f64a60f181d94e8e",
+    "C4": "5f8cc08d3c51f9d48b2ed04631c910146e482a056182067dfaac07f08bfe6cd5"
+  },
+  "historical_model_access_records": [
+    {
+      "preserved": true,
+      "repository_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "status": "SECOND_MODEL_NOT_AVAILABLE"
+    },
+    {
+      "preserved": true,
+      "repository_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "status": "LLAMA_ACCESS_STILL_BLOCKED"
+    }
+  ],
+  "lora": {
+    "alpha": 32,
+    "dropout": 0.05,
+    "r": 16,
+    "target_modules": [
+      "qkv_proj",
+      "o_proj"
+    ]
+  },
+  "loss_masking": {
+    "assistant_answer_and_official_turn_terminators_only": true,
+    "official_full_turn_template": true,
+    "prompt_labels": -100
+  },
+  "membership_sha256": {
+    "T1a_ACRONYM": {
+      "1000": "eb0b94e4518785c3b46de298d479e0c9788fe3cb06f88e3f1c457120ef78f56d",
+      "2000": "1ebfc5eb588c7e21fbe0b1a663f30aa318c4a50372a535032291cecac1c41e7b"
+    },
+    "T2_NUMERIC": {
+      "3000": "d33748e98ccd512e594ba617bf27ab75a452347bddbc73162e17110727c71d52",
+      "3678": "3bff3edf72d8d853d38807020f3355e68c51d6ab7ef705abf2da9c9260e94c04"
+    },
+    "T3_CLAIM": {
+      "2000": "c685aa7d162df48c6a1ebd5db04ae700ecc53fbb54939f850a89bc6ee37f9b03",
+      "2286": "a9390c816c5315402c6e74ffde4c94b4492345d95ef714d7c54cdb329241c037"
+    }
+  },
+  "memory_safety_implementation": {
+    "effective_batch_unchanged": true,
+    "gradient_accumulation": 8,
+    "micro_batch_size": 1,
+    "performance_independent": true
+  },
+  "model": {
+    "architecture": "Phi3ForCausalLM",
+    "attention_heads": 24,
+    "attention_implementation": "transformers native Phi3 SDPA",
+    "download_channel": "hf-mirror transport mirror",
+    "files": {
+      "LICENSE": {
+        "bytes": 1084,
+        "sha256": "fa8235e5b48faca34e3ca98cf4f694ef08bd216d28b58071a1f85b1d50cb814d"
+      },
+      "NOTICE.md": {
+        "bytes": 1809,
+        "sha256": "a3386cc7125ec75ed34d4f0a340c47782982095e251d322e01d8ecab22d87ba4"
+      },
+      "README.md": {
+        "bytes": 29246,
+        "sha256": "c4f34916182a3ee87d95d00c92847cfa687ab21dc338a577275f0c34cf0e1dfd"
+      },
+      "added_tokens.json": {
+        "bytes": 249,
+        "sha256": "d4f2aceb0f20b71dd1f4bcc7e052e4412946bf281840b8f83d39f259571af486"
+      },
+      "config.json": {
+        "bytes": 2504,
+        "sha256": "ac65d86061d3d0d704ee2511fd0eb8713ef19eb6eedba17c3080a4165d5b933b"
+      },
+      "configuration_phi3.py": {
+        "bytes": 10875,
+        "sha256": "ec2044b77d0b8111640ac134daa3af1f40dc552a739f8959626e7e58ea3352df"
+      },
+      "generation_config.json": {
+        "bytes": 168,
+        "sha256": "3e3f48753753f92d2b958679151861d4fd7bf26e4dfc41fd47056116c4914dcd"
+      },
+      "merges.txt": {
+        "bytes": 2418348,
+        "sha256": "856ce61180bb689282eed6b3a6838bb1f438399be23aefe9d20eb379791fb4ad"
+      },
+      "model-00001-of-00002.safetensors": {
+        "bytes": 4903637712,
+        "sha256": "bc703090b63eda16f639fa4de7ac54635c23105ab1da2f6ec4d3403151d38ee6"
+      },
+      "model-00002-of-00002.safetensors": {
+        "bytes": 2768428504,
+        "sha256": "7ff79b9d2d31076bac2663393451f6530f4fc8ca49b09002116c92c373dba983"
+      },
+      "model.safetensors.index.json": {
+        "bytes": 16273,
+        "sha256": "613a98d5e5716ca96fa75931abedc9c5a5d95f488ce4d62df71e639fe3ac6c59"
+      },
+      "modeling_phi3.py": {
+        "bytes": 54268,
+        "sha256": "d5fd551a7fe759b1d25e5b16b5012aa98b9b8bd400d26c7ee69c0090a245d6cd"
+      },
+      "special_tokens_map.json": {
+        "bytes": 587,
+        "sha256": "aff38493227d813e29fcf8406e8e90062f1f031aa47d589325e9c31d89ac7cc3"
+      },
+      "tokenizer.json": {
+        "bytes": 15524095,
+        "sha256": "382cc235b56c725945e149cc25f191da667c836655efd0857b004320e90e91ea"
+      },
+      "tokenizer_config.json": {
+        "bytes": 2932,
+        "sha256": "9c9b6bc0c94d95f69f826c41069a3e8b387ac3ced89601d201886e99240ac9db"
+      },
+      "vocab.json": {
+        "bytes": 3910310,
+        "sha256": "6cb65a857824fa6615bb1782d95d882617a8bbce1da0317118586b36f39e98bd"
+      }
+    },
+    "frozen_training_precision": "float16",
+    "hidden_size": 3072,
+    "index_total_size_bytes": 7672043520,
+    "key_value_heads": 8,
+    "layer_count": 32,
+    "license": "MIT",
+    "local_path": "<LOCAL_PATH_OMITTED>",
+    "model_dtype_metadata": "torch.bfloat16",
+    "model_type": "phi3",
+    "native_load_audit": {
+      "actual_target_modules": [
+        "qkv_proj",
+        "o_proj"
+      ],
+      "finite_fp16_forward": true,
+      "model_class": "Phi3ForCausalLM",
+      "trust_remote_code": false
+    },
+    "official_chat_template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% else %}{{ eos_token }}{% endif %}",
+    "official_chat_template_sha256": "febf589225c9728ab791f52e8897d7607a823d45368f0a4c92fa68997b40cce9",
+    "parameter_count": 3836021760,
+    "repo_identity": "microsoft/Phi-4-mini-instruct",
+    "revision": "revision_not_recoverable_from_local_snapshot",
+    "source_identity": "official Microsoft Hugging Face repository",
+    "status": "LOCAL_MODEL_PROVENANCE_AUDIT_PASS",
+    "tokenizer_class": "GPT2TokenizerFast",
+    "total_weight_size_bytes": 7672066216,
+    "vocab_size": 200064,
+    "weight_shard_count": 2
+  },
+  "prohibited": [
+    "resampling",
+    "rematerialization",
+    "new scale",
+    "new seed",
+    "third model",
+    "hyperparameter tuning",
+    "compute-matched Phi",
+    "paper modification"
+  ],
+  "replication_rules": {
+    "T3_growth": "replicated iff two-sided CI lower bound > 0",
+    "plateau_delta_nem": 0.02
+  },
+  "research_role": "CROSS_FAMILY_DIRECTIONAL_REPLICATION",
+  "runner": {
+    "path": "code\\corpus_experiments_v1\\sft\\run_sft_c5_phi4mini_replication.py",
+    "sha256": "7eac9d34128da2a02574eac57c0714e703d4df5575a232c127e42df638c8246a"
+  },
+  "seeds": [
+    42,
+    314159,
+    271828
+  ],
+  "smoke": {
+    "development_only": true,
+    "fresh_base_required_for_formal": true,
+    "optimizer_steps": 8,
+    "scale": 1000,
+    "seed": 42,
+    "task": "T1a_ACRONYM"
+  },
+  "statistics": {
+    "difference": "large-small",
+    "does_not_redefine_n_star": true,
+    "hierarchical_paired_bootstrap": 10000,
+    "inner": "paired fixed Eval example",
+    "outer": "paired training seed"
+  },
+  "status": "frozen_before_smoke_and_formal_training",
+  "training": {
+    "assistant_only_loss": true,
+    "effective_batch_size": 8,
+    "epochs": 3,
+    "fixed_epoch_protocol": true,
+    "gradient_accumulation": 8,
+    "gradient_checkpointing": true,
+    "learning_rate": 0.0002,
+    "max_grad_norm": 1.0,
+    "max_sequence_length": 1280,
+    "micro_batch_size": 1,
+    "optimizer": "AdamW",
+    "precision": "float16",
+    "scheduler": "linear",
+    "seed": 42,
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.0
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "binary_reference_levels": {
+    "conclusion_presence": "0=section absent",
+    "discussion_presence": "0=section absent",
+    "methods_presence": "0=section absent",
+    "results_presence": "0=section absent"
+  },
+  "continuous_pairwise_correlations": [
+    {
+      "abs_r_ge_0_80": false,
+      "left": "section_count",
+      "r": -0.04695215975423484,
+      "right": "average_paragraph_length"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "section_count",
+      "r": -0.07219821139944572,
+      "right": "figure_density_per_10k"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "section_count",
+      "r": -0.01109627964909229,
+      "right": "formula_density_per_10k"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "section_count",
+      "r": 0.0011790381358794254,
+      "right": "suspected_word_split_rate"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "section_count",
+      "r": 0.12502947648316676,
+      "right": "reference_like_rate"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "section_count",
+      "r": -0.05525859339470411,
+      "right": "table_density_per_10k"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "average_paragraph_length",
+      "r": -0.12721704423286256,
+      "right": "figure_density_per_10k"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "average_paragraph_length",
+      "r": -0.17769345913461482,
+      "right": "formula_density_per_10k"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "average_paragraph_length",
+      "r": 0.22283021381210852,
+      "right": "suspected_word_split_rate"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "average_paragraph_length",
+      "r": 0.284583023462097,
+      "right": "reference_like_rate"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "average_paragraph_length",
+      "r": -0.11320882823375367,
+      "right": "table_density_per_10k"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "figure_density_per_10k",
+      "r": 0.0019850643317927135,
+      "right": "formula_density_per_10k"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "figure_density_per_10k",
+      "r": -0.03669394796394137,
+      "right": "suspected_word_split_rate"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "figure_density_per_10k",
+      "r": -0.05463174655028885,
+      "right": "reference_like_rate"
+    },
+    {
+      "abs_r_ge_0_80": true,
+      "left": "figure_density_per_10k",
+      "r": 0.959137191271153,
+      "right": "table_density_per_10k"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "formula_density_per_10k",
+      "r": -0.05317069143835336,
+      "right": "suspected_word_split_rate"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "formula_density_per_10k",
+      "r": -0.11428650632823005,
+      "right": "reference_like_rate"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "formula_density_per_10k",
+      "r": -0.0026153924282164174,
+      "right": "table_density_per_10k"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "suspected_word_split_rate",
+      "r": 0.11195856315342417,
+      "right": "reference_like_rate"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "suspected_word_split_rate",
+      "r": -0.029341659349260057,
+      "right": "table_density_per_10k"
+    },
+    {
+      "abs_r_ge_0_80": false,
+      "left": "reference_like_rate",
+      "r": -0.05159699942746918,
+      "right": "table_density_per_10k"
+    }
+  ],
+  "correlation_rule": "if abs(r) >= 0.80 retain the conceptually more basic/interpretable variable",
+  "decision_timing": "frozen before fitting any source-feature/outcome association model",
+  "decisions": [
+    {
+      "excluded": "table_density_per_10k",
+      "reason": "abs(r)=0.959 >= 0.80; figure density retained as the more basic general object-richness measure",
+      "retained": "figure_density_per_10k"
+    }
+  ],
+  "final_model_vif": {
+    "average_paragraph_length": 1.2474578257608648,
+    "conclusion_presence": 1.0736361407027353,
+    "discussion_presence": 1.709133345313543,
+    "figure_density_per_10k": 1.0302561290481775,
+    "formula_density_per_10k": 1.0483081802040184,
+    "methods_presence": 1.5249200344522158,
+    "reference_like_rate": 1.128925583888689,
+    "results_presence": 1.6899955745639146,
+    "section_count": 1.1114857996347292,
+    "suspected_word_split_rate": 1.0595083184784737
+  },
+  "final_predictors": [
+    "results_presence",
+    "discussion_presence",
+    "conclusion_presence",
+    "methods_presence",
+    "section_count",
+    "average_paragraph_length",
+    "figure_density_per_10k",
+    "formula_density_per_10k",
+    "suspected_word_split_rate",
+    "reference_like_rate"
+  ],
+  "leakage_exclusions": [
+    "numeric_density",
+    "definition_pattern_density",
+    "claim_cue_density",
+    "raw_count",
+    "hard_pass_count",
+    "ready_count"
+  ],
+  "standardization": {
+    "average_paragraph_length": {
+      "mean": 195.26688910093603,
+      "sd": 62.92930571732769,
+      "winsor_lower": null,
+      "winsor_upper": null
+    },
+    "figure_density_per_10k": {
+      "mean": 21.290633552130007,
+      "sd": 105.7649268588202,
+      "winsor_lower": null,
+      "winsor_upper": null
+    },
+    "formula_density_per_10k": {
+      "mean": 3.8831398770913643,
+      "sd": 15.240630281604346,
+      "winsor_lower": null,
+      "winsor_upper": null
+    },
+    "reference_like_rate": {
+      "mean": 0.26186033024766814,
+      "sd": 0.22426031236804309,
+      "winsor_lower": null,
+      "winsor_upper": null
+    },
+    "section_count": {
+      "mean": 19.623287671232877,
+      "sd": 9.792837061586226,
+      "winsor_lower": null,
+      "winsor_upper": null
+    },
+    "suspected_word_split_rate": {
+      "mean": 0.03808328379894823,
+      "sd": 0.05078807235683449,
+      "winsor_lower": null,
+      "winsor_upper": null
+    }
+  },
+  "vif_rule": "inspect and do not retain obvious collinearity when VIF > 5"
+}

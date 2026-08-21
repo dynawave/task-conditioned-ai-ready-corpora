@@ -1,0 +1,87 @@
+{
+  "evaluation": {
+    "chat_template": "frozen official tokenizer.apply_chat_template",
+    "generation": "greedy do_sample=False, num_beams=1",
+    "max_new_tokens": {
+      "T1a_ACRONYM": 32,
+      "T2_NUMERIC": 32,
+      "T3_CLAIM": 160
+    },
+    "normalization": "Unicode NFKC; trim; collapse whitespace; case-sensitive"
+  },
+  "experiment": "corpus_v1_sft_c1_3_pre_grid_instruction_template_robustness",
+  "models": {
+    "Base": "frozen base",
+    "N100": "existing seed42 endpoint adapter",
+    "N2000": "existing seed42 endpoint adapter",
+    "T3_N2000_original": "existing original endpoint adapter",
+    "T3_N2000_recovery": "existing C1.1 technical-replicate adapter"
+  },
+  "parent_c1_protocol_sha256": "d4fa8dd565a0204285e2b70fc6914689a9042213ea4844cec4b44656aa146489",
+  "prohibited": [
+    "training",
+    "training-data modification",
+    "gold/context/candidate modification",
+    "N250/N500/N1000",
+    "new training seeds",
+    "NEM normalization modification"
+  ],
+  "role": {
+    "TEMPLATE_0_PRIMARY": "primary metric template",
+    "TEMPLATE_1": "secondary robustness evaluation",
+    "TEMPLATE_2": "secondary robustness evaluation"
+  },
+  "safety_checks": {
+    "T1a_ACRONYM": {
+      "candidate_unchanged": true,
+      "context_unchanged": true,
+      "eval_instance_ids_sha256": "835e08549f2a3d9c914985f775291547718bef985541b3865ea0246c1f231157",
+      "eval_instances": 300,
+      "gold_answer_occurrences_in_rendered_instruction": 0,
+      "gold_response_unchanged": true,
+      "no_gold_answer_in_template_or_rendered_instruction": true,
+      "semantic_scope": "same extractive target; no answer-format example, summary request, explanation request, or added reasoning requirement",
+      "template_variables_extracted_from_frozen_instruction": true
+    },
+    "T2_NUMERIC": {
+      "candidate_unchanged": true,
+      "context_unchanged": true,
+      "eval_instance_ids_sha256": "6bb607658b764ecf904b975e467a7bf6f2132f56f1cb50ed71c8b0581fbe50a7",
+      "eval_instances": 300,
+      "gold_answer_occurrences_in_rendered_instruction": 0,
+      "gold_response_unchanged": true,
+      "no_gold_answer_in_template_or_rendered_instruction": true,
+      "semantic_scope": "same extractive target; no answer-format example, summary request, explanation request, or added reasoning requirement",
+      "template_variables_extracted_from_frozen_instruction": true
+    },
+    "T3_CLAIM": {
+      "candidate_unchanged": true,
+      "context_unchanged": true,
+      "eval_instance_ids_sha256": "69260b3a2892ddde08e710dba780cd85090069d3f296da14252aa5d290f053da",
+      "eval_instances": 293,
+      "gold_answer_occurrences_in_rendered_instruction": 0,
+      "gold_response_unchanged": true,
+      "no_gold_answer_in_template_or_rendered_instruction": true,
+      "semantic_scope": "same extractive target; no answer-format example, summary request, explanation request, or added reasoning requirement",
+      "template_variables_extracted_from_frozen_instruction": false
+    }
+  },
+  "status": "frozen_before_template_evaluation",
+  "templates": {
+    "T1a_ACRONYM": {
+      "TEMPLATE_0_PRIMARY": "What does {SHORT_FORM} stand for in the passage? (frozen per-instance original instruction)",
+      "TEMPLATE_1": "Identify the full form of {SHORT_FORM} from the passage.",
+      "TEMPLATE_2": "According to the passage, expand the abbreviation {SHORT_FORM}."
+    },
+    "T2_NUMERIC": {
+      "TEMPLATE_0_PRIMARY": "According to the passage, what value is reported immediately after {ANCHOR}? (frozen per-instance original instruction)",
+      "TEMPLATE_1": "According to the passage, what value is reported for {ANCHOR}?",
+      "TEMPLATE_2": "Extract the reported value for {ANCHOR} from the passage."
+    },
+    "T3_CLAIM": {
+      "TEMPLATE_0_PRIMARY": "Extract the scientific finding stated in the passage. Preserve the wording, conditions, polarity, negation, and uncertainty expressed in the evidence. (frozen per-instance original instruction)",
+      "TEMPLATE_1": "Extract the scientific finding expressed in the passage. Preserve all stated conditions, polarity, negation, and uncertainty.",
+      "TEMPLATE_2": "Return the scientific claim stated in the passage using its original wording, including any explicit conditions and uncertainty."
+    }
+  }
+}

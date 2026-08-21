@@ -1,0 +1,101 @@
+{
+  "experiment": "corpus_v1_sft_full_scale_grid_v1_2_pre_execution",
+  "formal_runs": {
+    "endpoint_adapters_role": "development_endpoint_only",
+    "independent_fresh_base_lora_per_task_scale_seed": true,
+    "scales": [
+      100,
+      250,
+      500,
+      1000,
+      2000
+    ],
+    "tasks": [
+      "T1a_ACRONYM",
+      "T2_NUMERIC",
+      "T3_CLAIM"
+    ],
+    "training_seeds": [
+      42,
+      314159,
+      271828
+    ]
+  },
+  "inherits": {
+    "C1_2_protocol": "endpoint_adjudication_v1/training_protocol_v1_1.json",
+    "C1_3_template_config_sha256": "414b1d4fa656c3485a727e1ed33ffdb05747e68ddca3466139f2ca896ae825c0",
+    "C1_primary_protocol_sha256": "d4fa8dd565a0204285e2b70fc6914689a9042213ea4844cec4b44656aa146489"
+  },
+  "per_run_provenance_requirements": {
+    "bitwise_determinism_required": false,
+    "determinism_record": [
+      "torch_deterministic_algorithms",
+      "cudnn_deterministic",
+      "cudnn_benchmark",
+      "tf32"
+    ],
+    "environment_record": [
+      "python_version",
+      "pytorch_version",
+      "transformers_version",
+      "peft_version",
+      "cuda_version",
+      "cudnn_version",
+      "gpu_model"
+    ],
+    "epoch_1_order_sha256": true,
+    "epoch_2_order_sha256": true,
+    "epoch_3_order_sha256": true,
+    "order_definition": "actual DataLoader sample order, or an equivalent deterministic ordered instance-ID hash, after all shuffling",
+    "rng_record": [
+      "python_seed",
+      "numpy_seed",
+      "torch_cpu_seed",
+      "torch_cuda_seed"
+    ],
+    "telemetry": [
+      "loss_masking_unit_test",
+      "finite_loss",
+      "optimization_steps",
+      "training_tokens",
+      "runtime",
+      "peak_vram",
+      "fresh_base_adapter_reload",
+      "saved_predictions"
+    ],
+    "training_instance_ids": true,
+    "training_membership_hash": true
+  },
+  "primary_evaluation": {
+    "metric": "Normalized Exact Match",
+    "normalization": "Unicode NFKC; trim; collapse whitespace; case-sensitive",
+    "template": "TEMPLATE_0_PRIMARY"
+  },
+  "reference_plateau_rule": "After grid only, mark REFERENCE_NOT_PLATEAUED if mean_NEM(N2000)-mean_NEM(N1000)>0.02.",
+  "secondary_template_robustness_evaluation": {
+    "preselected_before_grid_results": true,
+    "required_task_scales": [
+      100,
+      1000,
+      2000
+    ],
+    "required_training_seeds": [
+      42,
+      314159,
+      271828
+    ],
+    "role": "secondary robustness only; does not replace primary TEMPLATE_0 NEM",
+    "templates": [
+      "TEMPLATE_0_PRIMARY",
+      "TEMPLATE_1",
+      "TEMPLATE_2"
+    ]
+  },
+  "statistics": {
+    "delta_nem": 0.02,
+    "delta_nem_use": "N2000 practical-equivalence/non-inferiority only, not reproducibility",
+    "n_star": "hierarchical bootstrap: outer training-seed resampling + inner paired Eval-example resampling",
+    "utility": "mean NEM across three independent training seeds"
+  },
+  "status": "frozen_not_executed"
+}

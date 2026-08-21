@@ -1,0 +1,100 @@
+{
+  "bootstrap_replicates": 10000,
+  "c2_formal_runs_reused": 30,
+  "c2_read_only": true,
+  "c3_complete_new_runs": 9,
+  "c3_expected_new_runs": 9,
+  "capacity": {
+    "T2_NUMERIC": {
+      "c2_n2000_prefix_exact_match": true,
+      "extension_membership_sha256": "3bff3edf72d8d853d38807020f3355e68c51d6ab7ef705abf2da9c9260e94c04",
+      "max_instances_per_paper": 3,
+      "n_max_feasible": 3678,
+      "round_counts": [
+        1374,
+        1246,
+        1058
+      ],
+      "task": "T2_NUMERIC",
+      "train_materialized_instances": 7145,
+      "unique_train_papers": 1374
+    },
+    "T3_CLAIM": {
+      "c2_n2000_prefix_exact_match": true,
+      "extension_membership_sha256": "a9390c816c5315402c6e74ffde4c94b4492345d95ef714d7c54cdb329241c037",
+      "max_instances_per_paper": 3,
+      "n_max_feasible": 2286,
+      "round_counts": [
+        1101,
+        721,
+        464
+      ],
+      "task": "T3_CLAIM",
+      "train_materialized_instances": 2936,
+      "unique_train_papers": 1101
+    }
+  },
+  "delta_nem": 0.02,
+  "extension_scales": {
+    "T2_NUMERIC": [
+      3000,
+      3678
+    ],
+    "T3_CLAIM": [
+      2286
+    ]
+  },
+  "integrity": {
+    "all_frozen_inputs_verified": true,
+    "all_new_primary_predictions_present": true,
+    "all_new_runs_finite_loss": true,
+    "all_new_runs_fresh_lora": true,
+    "all_new_runs_masking_pass": true,
+    "all_new_runs_order_auditable": true,
+    "all_new_target_truncation_zero": true,
+    "all_new_train_eval_paper_overlap_zero": true
+  },
+  "n_star": [
+    {
+      "delta_nem": 0.02,
+      "n_star": 3000,
+      "n_star_status": "identified",
+      "reference_scale": 3678,
+      "task": "T2_NUMERIC"
+    },
+    {
+      "delta_nem": 0.02,
+      "n_star": 2286,
+      "n_star_status": "REFERENCE_ONLY_NOT_IDENTIFIED",
+      "reference_scale": 2286,
+      "task": "T3_CLAIM"
+    }
+  ],
+  "plateau": [
+    {
+      "capacity_limited": true,
+      "conclusion": "",
+      "largest_minus_previous": -0.0011111111111111738,
+      "largest_scale": 3678,
+      "plateau_status": "REFERENCE_PLATEAU_COMPATIBLE",
+      "previous_scale": 3000,
+      "task": "T2_NUMERIC"
+    },
+    {
+      "capacity_limited": true,
+      "conclusion": "PLATEAU_NOT_IDENTIFIED_WITHIN_AVAILABLE_POOL",
+      "largest_minus_previous": 0.10580204778156999,
+      "largest_scale": 2286,
+      "plateau_status": "REFERENCE_NOT_PLATEAUED",
+      "previous_scale": 2000,
+      "task": "T3_CLAIM"
+    }
+  ],
+  "status": "SFT_SCALE_EXTENSION_READY",
+  "technical_retries": [],
+  "warnings": [
+    "TRAINING_STOCHASTICITY_WARNING",
+    "SOURCE_PROVENANCE_AUDIT_WARNING",
+    "FORMAT_METRIC_WARNING_T2"
+  ]
+}

@@ -1,0 +1,12 @@
+dataset,excluded_n,input_n,remaining_n,rule,stage_order,stage_role
+QASPER,0,416,416,official_test_papers,1,upstream_context_not_candidate_unit
+QASPER,0,1451,1451,official_test_questions,2,upstream_context_not_candidate_unit
+QASPER,0,3554,3554,human_answer_annotations,3,upstream_context_not_candidate_unit
+QASPER,0,3698,3698,human_extractive_spans,4,candidate_unit_start
+QASPER,3572,3698,126,strict_numeric_range_percent_number_unit_or_statistical_schema,5,eligibility_filter
+QASPER,0,126,126,nonempty_human_annotated_evidence,6,eligibility_filter
+QASPER,0,126,126,normalized_answer_present_in_human_gold_evidence,7,eligibility_filter
+SciTaT,0,953,953,official_test_items,1,candidate_unit_start
+SciTaT,908,953,45,lookup_only_question_type_no_calculation_or_multistep,2,eligibility_filter
+SciTaT,38,45,7,exactly_one_strict_numeric_final_answer,3,eligibility_filter
+SciTaT,2,7,5,normalized_answer_present_in_supplied_table_or_text,4,eligibility_filter

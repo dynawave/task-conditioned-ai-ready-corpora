@@ -1,0 +1,62 @@
+{
+  "samples": 150,
+  "judgments": 450,
+  "unique_papers": 139,
+  "strict_majority_accept": 135,
+  "strict_majority_accept_rate": 0.9,
+  "relaxed_majority_accept": 139,
+  "relaxed_majority_accept_rate": 0.9266666666666666,
+  "majority_reject": 5,
+  "accept_reject_conflict": 6,
+  "unanimous_accept": 108,
+  "complete_agreement": 109,
+  "complete_agreement_rate": 0.7266666666666667,
+  "overall_raw_pairwise_agreement": 0.8155555555555556,
+  "fleiss_kappa": 0.22763555151163994,
+  "category_totals": {
+    "Accept": 390,
+    "Borderline": 41,
+    "Reject": 19
+  },
+  "category_proportions": {
+    "Accept": 0.8666666666666667,
+    "Borderline": 0.09111111111111111,
+    "Reject": 0.042222222222222223
+  },
+  "judge_accept_counts": {
+    "GPT-5.6 Sol": 118,
+    "Kimi-K3": 130,
+    "Grok-4.5": 142
+  },
+  "dimension_agreement": {
+    "evidence_support": {
+      "pairwise_agreement": 0.9555555555555556,
+      "fleiss_kappa": 0.4527544691718359,
+      "complete_agreement": 141
+    },
+    "factual_correctness": {
+      "pairwise_agreement": 0.9044444444444445,
+      "fleiss_kappa": 0.29042904290429106,
+      "complete_agreement": 131
+    },
+    "condition_completeness": {
+      "pairwise_agreement": 0.8511111111111112,
+      "fleiss_kappa": 0.2817324185248711,
+      "complete_agreement": 117
+    },
+    "answer_uniqueness": {
+      "pairwise_agreement": 0.94,
+      "fleiss_kappa": 0.2259174311926596,
+      "complete_agreement": 137
+    }
+  },
+  "sensitive_text_mismatch_count": 16,
+  "audit_sample_seed": 20260819,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": "NOT_RECORDED_IN_FROZEN_ARTIFACTS",
+  "copyright_sensitive_columns_excluded": [
+    "Evidence_Context",
+    "Conditional_Claim",
+    "Short_Reason"
+  ]
+}

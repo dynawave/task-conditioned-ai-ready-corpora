@@ -1,0 +1,55 @@
+{
+  "base_model": {
+    "config_sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+    "dtype": "float16",
+    "local_files_only": true,
+    "quantization": "none",
+    "repository_id": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "snapshot": "<LOCAL_PATH_OMITTED>",
+    "tokenizer_bundle_sha256": "badd01fb58846dadbe2b7ce2a21a2e8e2e7257c87bf971f5689be8f4c87fa786",
+    "tokenizer_files": {
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  },
+  "bootstrap_replicates": 10000,
+  "c1_training_protocol_sha256": "d4fa8dd565a0204285e2b70fc6914689a9042213ea4844cec4b44656aa146489",
+  "c2_manifest_sha256": "8925d562c8099e96db693a9e56b462e80d9492247231ef2d8e99aaad6ea2ff03",
+  "c2_read_only": true,
+  "capacity_summary_sha256": "1ae08d9a8db667f6cb258cd9ecdb931cde9bbfa87d15a21398c340796c8dcdb8",
+  "delta_nem": 0.02,
+  "experiment": "corpus_v1_sft_c3_post_grid_scale_extension",
+  "extension_scales": {
+    "T2_NUMERIC": [
+      3000,
+      3678
+    ],
+    "T3_CLAIM": [
+      2286
+    ]
+  },
+  "formal_scale_protocol_sha256": "5c696679f7d6d39462822b8d7546e0f0ad32c50591509c8e771cd0f1fe90ed32",
+  "materialization_manifest_sha256": "b4015f456027d794a85d01bbbd7417ffee8a66f9b63177dd3cd511507aaa2a2c",
+  "runner": {
+    "path": "code\\corpus_experiments_v1\\sft\\run_sft_c3_scale_extension.py",
+    "sha256": "d050f4ea1883cc7858b90c13874f048aaec963514bb8a27773fc5766921e7dba"
+  },
+  "secondary_template_max_scales": {
+    "T2_NUMERIC": 3678,
+    "T3_CLAIM": 2286
+  },
+  "status": "frozen_after_capacity_before_training",
+  "tasks": [
+    "T2_NUMERIC",
+    "T3_CLAIM"
+  ],
+  "template_config_sha256": "414b1d4fa656c3485a727e1ed33ffdb05747e68ddca3466139f2ca896ae825c0",
+  "training_seeds": [
+    42,
+    314159,
+    271828
+  ]
+}

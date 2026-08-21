@@ -1,0 +1,3 @@
+task,n_star,n_star_status,reference_scale,delta_nem
+T2_NUMERIC,3000,identified,3678,0.02
+T3_CLAIM,2286,REFERENCE_ONLY_NOT_IDENTIFIED,2286,0.02

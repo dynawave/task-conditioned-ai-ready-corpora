@@ -1,0 +1,4 @@
+task,small_scale,large_scale,comparison,point_difference,ci95_low,ci95_high,bootstrap_replicates,bootstrap_seed,method
+T1a_ACRONYM,1000,2000,large_minus_small,0.0011111111111110998,-0.008888888888888889,0.011111111111111112,10000,SHA256(C5_PHI4MINI_BOOTSTRAP_V1|task),outer paired training seed; inner paired fixed-Eval example
+T2_NUMERIC,3000,3678,large_minus_small,0.0033333333333332993,0.0,0.007777777777777778,10000,SHA256(C5_PHI4MINI_BOOTSTRAP_V1|task),outer paired training seed; inner paired fixed-Eval example
+T3_CLAIM,2000,2286,large_minus_small,-0.005688282138794132,-0.031854379977246876,0.015927189988623438,10000,SHA256(C5_PHI4MINI_BOOTSTRAP_V1|task),outer paired training seed; inner paired fixed-Eval example

@@ -1,0 +1,149 @@
+{
+  "experiment_id": "IPM_FINAL_ROBUSTNESS_V1",
+  "frozen_input_hashes": {
+    "c2/n_star_summary.csv": "f1289ee473116c8571560ce8f7835ba549acac9971d60be2756719ee0bb7091d",
+    "c2/practical_equivalence.csv": "e6c57d19903bdbcb6b66d55e9167acd4dcff7f84a8dc70e3bfe052ec51e932cf",
+    "c2/summary.json": "5d029afccc33ed73abc4d8b56ec7bfcf75c4bae0ab7dd15ac9b1d20c6a2bd403",
+    "c3/n_star_summary.csv": "ef7ea56a31075138fe0d201500ddb1d8f862cab66014f2d30f1750671f3374ba",
+    "c3/plateau_summary.csv": "27d0bc49fff638ec2d193cf426a54ecd261bc329a4088262f171f0b110b5ba78",
+    "c3/practical_equivalence.csv": "4484fc6204bbe03cb7906072a68c1a94491b004d14814aaccc7221b0de373507",
+    "c3/summary.json": "42032ca2bfcf4fa664df173dd6eb59b3d6fa586555b014120e60bf68be066d81",
+    "phi/bootstrap.csv": "d08538d67606dc638ed442185dbb7bb91100849fe2f308cd75e208c368f2e223",
+    "phi/scale_metrics.csv": "75eb35abeffc54560471b2c732667ee681f977fa5095184967e9e110eb858b89",
+    "phi/summary.json": "0ce09b5b763c33e1b4d7575a4c5064f22c9be3afb5e5bc61a07ad734cd1b2def",
+    "source/cross_task_ranking.csv": "08cff2d1688afb5cf02ed42e0b19bbc40bdae047b45fa3eaef9f4b81f84dcaf0",
+    "source/experiment_config.json": "37afb7c9ada3ff134e09b49300feeafe838d72572e8c76ab1479a09e11978785",
+    "source/oof_predictions.parquet": "4cc749c752ff80666e2a7832bdcb149ac93923471763949b314cd2ab937b72b4",
+    "source/primary_bootstrap.csv": "586da8b5e6551d8a71fd7e05e48ca5dc3cb9cabb7900c49d2737b61a0d8eb7d1",
+    "source/selection_metrics.csv": "98f4493608a29157e5278d0d806a2173fdffa3103eb0f9fa69d3ab1b0dafd5c8"
+  },
+  "llm_training_run": false,
+  "manuscript_modified": false,
+  "rq2": {
+    "bootstrap": "paper resampling with selection recomputed; paired specific-minus-common at 20%",
+    "budgets": [
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "common_definition": "within each frozen budget score type, mean of T1a/T2/T3 average-tie OOF percentile ranks mapped to [0,1]; one cross-task ranking per budget type",
+    "lift": "capture_fraction / nominal_budget_fraction",
+    "paper_budget_rounding": "ceil(fraction * 1898)",
+    "random_repeats": 10000,
+    "random_seed": 20260817,
+    "specific_common_bootstrap_replicates": 10000,
+    "task_specific_paper_score": "oof_predicted_count",
+    "task_specific_token_score": "oof_predicted_rate_per_10k",
+    "tasks": [
+      "T1a_ACRONYM",
+      "T2_NUMERIC",
+      "T3_CLAIM"
+    ],
+    "tie_break": "paper_id ascending after descending score",
+    "token_budget": "floor(fraction * total source tokens); whole documents; stop before first exceedance"
+  },
+  "rq3": {
+    "criterion": "smallest candidate with frozen/recomputed one-sided UCB95(reference NEM - candidate NEM) <= delta",
+    "deltas": [
+      0.01,
+      0.02,
+      0.03,
+      0.05
+    ],
+    "phi": "recompute original C5 10,000-replicate bootstrap distribution from frozen primary predictions to recover one-sided UCB95; no missing scales added",
+    "qwen": "reuse frozen C2/C3 10,000-replicate hierarchical bootstrap outputs"
+  },
+  "runtime_seconds": 60.672579526901245,
+  "sanity_gate": {
+    "delta_0_02": {
+      "passed": true,
+      "rows": [
+        {
+          "n_star": 1000,
+          "reference_n": 2000,
+          "status": "IDENTIFIED",
+          "task": "T1a_ACRONYM"
+        },
+        {
+          "n_star": 3000,
+          "reference_n": 3678,
+          "status": "IDENTIFIED",
+          "task": "T2_NUMERIC"
+        },
+        {
+          "n_star": null,
+          "reference_n": 2286,
+          "status": "NOT_REACHED",
+          "task": "T3_CLAIM"
+        }
+      ]
+    },
+    "effective_n": 1898,
+    "frozen_20_percent": {
+      "checks": [
+        {
+          "budget_type": "paper_count",
+          "capture": 0.27408282276518786,
+          "random_1000_exact": true,
+          "random_capture_1000": 0.20003447257695411,
+          "task": "T1a_ACRONYM",
+          "task_specific_exact": true
+        },
+        {
+          "budget_type": "source_token",
+          "capture": 0.2402745995423341,
+          "random_1000_exact": true,
+          "random_capture_1000": 0.19980549199084666,
+          "task": "T1a_ACRONYM",
+          "task_specific_exact": true
+        },
+        {
+          "budget_type": "paper_count",
+          "capture": 0.33273922782340615,
+          "random_1000_exact": true,
+          "random_capture_1000": 0.2000422457188277,
+          "task": "T2_NUMERIC",
+          "task_specific_exact": true
+        },
+        {
+          "budget_type": "source_token",
+          "capture": 0.21782798236951756,
+          "random_1000_exact": true,
+          "random_capture_1000": 0.19940959560683075,
+          "task": "T2_NUMERIC",
+          "task_specific_exact": true
+        },
+        {
+          "budget_type": "paper_count",
+          "capture": 0.3469928993070408,
+          "random_1000_exact": true,
+          "random_capture_1000": 0.20066575412781248,
+          "task": "T3_CLAIM",
+          "task_specific_exact": true
+        },
+        {
+          "budget_type": "source_token",
+          "capture": 0.4164599195825135,
+          "random_1000_exact": true,
+          "random_capture_1000": 0.20037094704422947,
+          "task": "T3_CLAIM",
+          "task_specific_exact": true
+        }
+      ],
+      "passed": true
+    },
+    "status": "PASS"
+  },
+  "software": {
+    "figure_renderer": "editable_svg_plus_reportlab_vector_pdf",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.10.20",
+    "reportlab": "4.4.9",
+    "scipy": "1.15.3"
+  },
+  "status": "SUCCESS"
+}

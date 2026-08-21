@@ -1,0 +1,224 @@
+{
+  "status": "RAG_FINAL_READY",
+  "top_k_regression_passed": true,
+  "top_k_regression": [
+    {
+      "view": "B1",
+      "metric": "ces@5",
+      "old_value": 0.6888544891640866,
+      "new_value": 0.6888544891640866,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "view": "B1",
+      "metric": "hit@5",
+      "old_value": 0.7964396284829721,
+      "new_value": 0.7964396284829721,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "view": "B1",
+      "metric": "recall@5",
+      "old_value": 0.7418932181509581,
+      "new_value": 0.7418932181509581,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "view": "B1",
+      "metric": "mrr",
+      "old_value": 0.5124459167575175,
+      "new_value": 0.5124459167575175,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "view": "B2",
+      "metric": "ces@5",
+      "old_value": 0.5820433436532507,
+      "new_value": 0.5820433436532507,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "view": "B2",
+      "metric": "hit@5",
+      "old_value": 0.7515479876160991,
+      "new_value": 0.7515479876160991,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "view": "B2",
+      "metric": "recall@5",
+      "old_value": 0.6581372981751831,
+      "new_value": 0.6581372981751831,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "view": "B2",
+      "metric": "mrr",
+      "old_value": 0.5502238426375613,
+      "new_value": 0.5502238426375613,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "view": "B3",
+      "metric": "ces@5",
+      "old_value": 0.6222910216718266,
+      "new_value": 0.6222910216718266,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "view": "B3",
+      "metric": "hit@5",
+      "old_value": 0.7546439628482973,
+      "new_value": 0.7546439628482973,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "view": "B3",
+      "metric": "recall@5",
+      "old_value": 0.6889494962698482,
+      "new_value": 0.6889494962698482,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "view": "B3",
+      "metric": "mrr",
+      "old_value": 0.5808919698626234,
+      "new_value": 0.5808919698626234,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    }
+  ],
+  "ranking_depth": [
+    {
+      "view": "B1",
+      "formal_question_count": 1292,
+      "initial_top256_needs_expansion": 0,
+      "top512_additional_needed": 0,
+      "beyond_top512_needed": 0,
+      "max_actual_required_rank_depth": 5,
+      "p95_required_rank_depth": 5.0,
+      "candidate_exhausted_before_2048_tokens": 42,
+      "budget_prefix_incomplete@512": 0,
+      "budget_prefix_incomplete@1024": 0,
+      "budget_prefix_incomplete@2048": 0
+    },
+    {
+      "view": "B2",
+      "formal_question_count": 1292,
+      "initial_top256_needs_expansion": 0,
+      "top512_additional_needed": 0,
+      "beyond_top512_needed": 0,
+      "max_actual_required_rank_depth": 43,
+      "p95_required_rank_depth": 24.0,
+      "candidate_exhausted_before_2048_tokens": 42,
+      "budget_prefix_incomplete@512": 0,
+      "budget_prefix_incomplete@1024": 0,
+      "budget_prefix_incomplete@2048": 0
+    },
+    {
+      "view": "B3",
+      "formal_question_count": 1292,
+      "initial_top256_needs_expansion": 0,
+      "top512_additional_needed": 0,
+      "beyond_top512_needed": 0,
+      "max_actual_required_rank_depth": 26,
+      "p95_required_rank_depth": 13.0,
+      "candidate_exhausted_before_2048_tokens": 4,
+      "budget_prefix_incomplete@512": 0,
+      "budget_prefix_incomplete@1024": 0,
+      "budget_prefix_incomplete@2048": 0
+    }
+  ],
+  "budget_metrics": [
+    {
+      "view": "B1",
+      "formal_question_count": 1292,
+      "BudgetCES@512": 0.21749226006191952,
+      "BudgetCES@512_ci_low": 0.19504643962848298,
+      "BudgetCES@512_ci_high": 0.24071207430340558,
+      "BudgetRecall@512": 0.2574472332792766,
+      "BudgetRecall@512_ci_low": 0.23504244680328268,
+      "BudgetRecall@512_ci_high": 0.2805867686987076,
+      "BudgetCES@1024": 0.39473684210526316,
+      "BudgetCES@1024_ci_low": 0.3684210526315789,
+      "BudgetCES@1024_ci_high": 0.4218266253869969,
+      "BudgetRecall@1024": 0.4526109532881979,
+      "BudgetRecall@1024_ci_low": 0.4270617697146335,
+      "BudgetRecall@1024_ci_high": 0.47837472818074595,
+      "BudgetCES@2048": 0.6075851393188855,
+      "BudgetCES@2048_ci_low": 0.5804953560371517,
+      "BudgetCES@2048_ci_high": 0.6346749226006192,
+      "BudgetRecall@2048": 0.6660122213527786,
+      "BudgetRecall@2048_ci_low": 0.6416235790031263,
+      "BudgetRecall@2048_ci_high": 0.6904206748488868
+    },
+    {
+      "view": "B2",
+      "formal_question_count": 1292,
+      "BudgetCES@512": 0.5023219814241486,
+      "BudgetCES@512_ci_low": 0.47523219814241485,
+      "BudgetCES@512_ci_high": 0.5301857585139319,
+      "BudgetRecall@512": 0.5727708558030784,
+      "BudgetRecall@512_ci_low": 0.5476069559864574,
+      "BudgetRecall@512_ci_high": 0.5975188968131112,
+      "BudgetCES@1024": 0.6501547987616099,
+      "BudgetCES@1024_ci_low": 0.6238390092879257,
+      "BudgetCES@1024_ci_high": 0.6764705882352942,
+      "BudgetRecall@1024": 0.7244800125462502,
+      "BudgetRecall@1024_ci_low": 0.7021215274855592,
+      "BudgetRecall@1024_ci_high": 0.7463550550112082,
+      "BudgetCES@2048": 0.8003095975232198,
+      "BudgetCES@2048_ci_low": 0.7786377708978328,
+      "BudgetCES@2048_ci_high": 0.8219814241486069,
+      "BudgetRecall@2048": 0.8713892736226531,
+      "BudgetRecall@2048_ci_low": 0.8555831836428017,
+      "BudgetRecall@2048_ci_high": 0.8869543731620071
+    },
+    {
+      "view": "B3",
+      "formal_question_count": 1292,
+      "BudgetCES@512": 0.3893188854489164,
+      "BudgetCES@512_ci_low": 0.36300309597523217,
+      "BudgetCES@512_ci_high": 0.41640866873065013,
+      "BudgetRecall@512": 0.4421056088462802,
+      "BudgetRecall@512_ci_low": 0.4162599563850684,
+      "BudgetRecall@512_ci_high": 0.46791535615951046,
+      "BudgetCES@1024": 0.5340557275541795,
+      "BudgetCES@1024_ci_low": 0.5069659442724458,
+      "BudgetCES@1024_ci_high": 0.5611455108359134,
+      "BudgetRecall@1024": 0.5943326329040033,
+      "BudgetRecall@1024_ci_low": 0.569031581562414,
+      "BudgetRecall@1024_ci_high": 0.6195895602940729,
+      "BudgetCES@2048": 0.684984520123839,
+      "BudgetCES@2048_ci_low": 0.6602167182662538,
+      "BudgetCES@2048_ci_high": 0.7105263157894737,
+      "BudgetRecall@2048": 0.7470684791780197,
+      "BudgetRecall@2048_ci_low": 0.7253349126069917,
+      "BudgetRecall@2048_ci_high": 0.7684261228418848
+    }
+  ],
+  "mrr_definition": "first rank in the persisted complete per-paper ranking that recovers any gold evidence; RR=0 only after the candidate set is exhausted without a hit",
+  "mrr_ranking_depth": "full per-paper candidate ranking, persisted in retrieval_rankings.parquet",
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.7.1+cu128",
+    "transformers": "4.51.3",
+    "numpy": "2.2.6",
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 5090 Laptop GPU",
+    "peak_gpu_memory_bytes": 1411180032
+  },
+  "runtime_seconds": 85.25591897964478,
+  "interpretation_boundary": "This recovers missing ranking depth under the frozen RAG definition; it does not introduce a new corpus construction condition or establish a universally optimal view."
+}

@@ -1,0 +1,46 @@
+{
+  "all_formal_loads_local_files_only": true,
+  "complete_runs": 18,
+  "expected_runs": 18,
+  "integrity": {
+    "bootstrap_complete": true,
+    "eval_match": true,
+    "finite_loss": true,
+    "fresh_base_and_lora_each_run": true,
+    "masking_pass": true,
+    "membership_match": true,
+    "paper_overlap_zero": true,
+    "predictions_complete": true,
+    "protocol_drift": false,
+    "target_truncation_zero": true
+  },
+  "interpretation_constraints": [
+    "key-interval replication only, not a full learning curve",
+    "does not define a Qwen2.5-7B n_star or optimum scale",
+    "Qwen-vs-Phi absolute performance is not a model leaderboard",
+    "no changes to frozen Qwen2.5-3B or Phi results"
+  ],
+  "model_downloaded_once_for_experiment": true,
+  "model_local_path": "<LOCAL_PATH_OMITTED>",
+  "practical_equivalence": {
+    "T1a_ACRONYM": true,
+    "T2_NUMERIC": true,
+    "T3_CLAIM": false
+  },
+  "qwen3b_qwen7b_relative_equivalence_pattern_consistent": true,
+  "qwen7b_minus_qwen3b_small_scale_NEM": {
+    "T1a_ACRONYM": 0.011111111111111294,
+    "T2_NUMERIC": 1.1102230246251565e-16,
+    "T3_CLAIM": 0.06712172923777004
+  },
+  "smoke_excluded_from_scientific_results": true,
+  "smoke_pass": true,
+  "status": "QWEN7B_KEY_INTERVAL_READY",
+  "training_cost": {
+    "evaluation_peak_gpu_memory_bytes_max": 16216734208,
+    "gpu_hours": 21.97302591955556,
+    "peak_gpu_memory_bytes_max": 17891828224,
+    "runtime_seconds": 79102.89331040002,
+    "training_tokens_total": 50958765
+  }
+}

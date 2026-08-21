@@ -1,0 +1,39 @@
+{
+  "clean_text_rules": [
+    "Unicode NFKC",
+    "remove Unicode Cc/Cf controls except tab/newline/carriage return before whitespace collapse",
+    "collapse whitespace"
+  ],
+  "content_list_process_availability": 0,
+  "experiment": "corpus_v1_pilot2k",
+  "manifest": "aicorpus-derived/e2_prep_v25/e2_prep_v25.sqlite::source_pool_members[pool_id=S2K]",
+  "manifest_database_sha256": "3b97c102d3d76143cbb75c20a7188f6e6b85273807eb69ca4f00eb2853560172",
+  "manifest_integrity_check": "ok",
+  "page_numbering": "zero_based_mineru_page_idx",
+  "paper_count": 2000,
+  "paper_id_sha256": "4381084194802c40c2a55fa77a32fb0fcc9e6b44dbd6a9e8fbfd38dc8fd108f4",
+  "paper_near_duplicate_policy": "reuse frozen Gate0 signals; do not create a new semantic threshold",
+  "paragraph_fragment_similarity": "normalized exact cross-document match, minimum 200 characters",
+  "parser_source": "paragraph_article_source",
+  "pool_id": "S2K",
+  "raw_source_files": [
+    "paragraph_article.source.json",
+    "paragraph_article.json"
+  ],
+  "raw_source_root": "aicorpus-data/mineru_core_31k",
+  "seed": 20260727,
+  "selection_rule": "historical_frozen_random_prefix",
+  "source_adapter_validation": "smoke10 content_list_process/source location parity PASS",
+  "suspected_word_split_action": "flag only; never merge",
+  "tokenizer": {
+    "config_sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+    "dtype": "float16",
+    "local_files_only": true,
+    "parameter_count": 3085938688,
+    "quantization": "none",
+    "repository_id": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "snapshot": "<LOCAL_PATH_OMITTED>",
+    "tokenizer_bundle_sha256": "badd01fb58846dadbe2b7ce2a21a2e8e2e7257c87bf971f5689be8f4c87fa786"
+  }
+}

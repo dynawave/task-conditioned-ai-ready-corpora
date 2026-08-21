@@ -1,0 +1,247 @@
+{
+  "blockers": [],
+  "duplicate_audit": {
+    "exact_cross_paper_content_groups": 0,
+    "normalized_cross_paper_content_groups": 0,
+    "train_eval_exact_content_overlap": 0
+  },
+  "eval": {
+    "T1a_ACRONYM": {
+      "n": 300,
+      "target_traceability": 1.0,
+      "train_eval_candidate_overlap": 0,
+      "train_eval_paper_overlap": 0,
+      "unique_papers": 300
+    },
+    "T2_NUMERIC": {
+      "n": 300,
+      "target_traceability": 1.0,
+      "train_eval_candidate_overlap": 0,
+      "train_eval_paper_overlap": 0,
+      "unique_papers": 300
+    },
+    "T3_CLAIM": {
+      "n": 293,
+      "target_traceability": 1.0,
+      "train_eval_candidate_overlap": 0,
+      "train_eval_paper_overlap": 0,
+      "unique_papers": 293
+    }
+  },
+  "gates": {
+    "all_eval_sets_use_300_or_all_eligible_papers": true,
+    "all_instances_provenance_100_percent": true,
+    "all_primary_tasks_have_nested_2000": true,
+    "all_targets_traceable_100_percent": true,
+    "cal100_included_zero": true,
+    "t1a_ambiguity_zero": true,
+    "t2_instruction_ambiguity_zero": true,
+    "t3_multi_target_ambiguity_zero": true,
+    "train_eval_candidate_overlap_zero": true,
+    "train_eval_exact_overlap_zero": true,
+    "train_eval_paper_overlap_zero": true
+  },
+  "materialization": [
+    {
+      "context_cropped": 132,
+      "eval_eligible": 2815,
+      "mv_source_candidates": 13547,
+      "scaling_materializable": 13476,
+      "task": "T1a_ACRONYM",
+      "train_eligible": 10661
+    },
+    {
+      "context_cropped": null,
+      "eval_eligible": null,
+      "exclusion_count": 71,
+      "exclusion_reason": "AMBIGUOUS_ACRONYM_CONTEXT",
+      "mv_source_candidates": null,
+      "scaling_materializable": null,
+      "task": "T1a_ACRONYM",
+      "train_eligible": null
+    },
+    {
+      "context_cropped": 19,
+      "eval_eligible": 1879,
+      "mv_source_candidates": 41519,
+      "scaling_materializable": 9024,
+      "task": "T2_NUMERIC",
+      "train_eligible": 7145
+    },
+    {
+      "context_cropped": null,
+      "eval_eligible": null,
+      "exclusion_count": 32495,
+      "exclusion_reason": "NO_UNAMBIGUOUS_NUMERIC_INSTRUCTION",
+      "mv_source_candidates": null,
+      "scaling_materializable": null,
+      "task": "T2_NUMERIC",
+      "train_eligible": null
+    },
+    {
+      "context_cropped": 167,
+      "eval_eligible": 802,
+      "mv_source_candidates": 11689,
+      "scaling_materializable": 3738,
+      "task": "T3_CLAIM",
+      "train_eligible": 2936
+    },
+    {
+      "context_cropped": null,
+      "eval_eligible": null,
+      "exclusion_count": 234,
+      "exclusion_reason": "CONTEXT_TRUNCATION_INVALID",
+      "mv_source_candidates": null,
+      "scaling_materializable": null,
+      "task": "T3_CLAIM",
+      "train_eligible": null
+    },
+    {
+      "context_cropped": null,
+      "eval_eligible": null,
+      "exclusion_count": 7717,
+      "exclusion_reason": "MULTIPLE_VALID_CLAIMS_IN_CONTEXT",
+      "mv_source_candidates": null,
+      "scaling_materializable": null,
+      "task": "T3_CLAIM",
+      "train_eligible": null
+    }
+  ],
+  "nested_pools": [
+    {
+      "instances": 100,
+      "scale": 100,
+      "serialized_tokens": 34087,
+      "task": "T1a_ACRONYM",
+      "task_subtype_composition": "{\"long_form_abbreviation\": 100}",
+      "unique_papers": 100
+    },
+    {
+      "instances": 250,
+      "scale": 250,
+      "serialized_tokens": 86567,
+      "task": "T1a_ACRONYM",
+      "task_subtype_composition": "{\"abbreviation_long_form\": 5, \"long_form_abbreviation\": 245}",
+      "unique_papers": 250
+    },
+    {
+      "instances": 500,
+      "scale": 500,
+      "serialized_tokens": 172658,
+      "task": "T1a_ACRONYM",
+      "task_subtype_composition": "{\"abbreviation_long_form\": 9, \"long_form_abbreviation\": 491}",
+      "unique_papers": 500
+    },
+    {
+      "instances": 1000,
+      "scale": 1000,
+      "serialized_tokens": 345346,
+      "task": "T1a_ACRONYM",
+      "task_subtype_composition": "{\"abbreviation_long_form\": 29, \"long_form_abbreviation\": 971}",
+      "unique_papers": 1000
+    },
+    {
+      "instances": 2000,
+      "scale": 2000,
+      "serialized_tokens": 682496,
+      "task": "T1a_ACRONYM",
+      "task_subtype_composition": "{\"abbreviation_long_form\": 66, \"long_form_abbreviation\": 1934}",
+      "unique_papers": 1392
+    },
+    {
+      "instances": 100,
+      "scale": 100,
+      "serialized_tokens": 31522,
+      "task": "T2_NUMERIC",
+      "task_subtype_composition": "{\"measurement\": 56, \"percentage\": 34, \"range\": 6, \"statistical_value\": 4}",
+      "unique_papers": 100
+    },
+    {
+      "instances": 250,
+      "scale": 250,
+      "serialized_tokens": 77585,
+      "task": "T2_NUMERIC",
+      "task_subtype_composition": "{\"measurement\": 145, \"percentage\": 81, \"range\": 19, \"statistical_value\": 5}",
+      "unique_papers": 250
+    },
+    {
+      "instances": 500,
+      "scale": 500,
+      "serialized_tokens": 152014,
+      "task": "T2_NUMERIC",
+      "task_subtype_composition": "{\"measurement\": 290, \"percentage\": 149, \"range\": 45, \"statistical_value\": 16}",
+      "unique_papers": 500
+    },
+    {
+      "instances": 1000,
+      "scale": 1000,
+      "serialized_tokens": 305153,
+      "task": "T2_NUMERIC",
+      "task_subtype_composition": "{\"measurement\": 574, \"percentage\": 305, \"range\": 95, \"statistical_value\": 26}",
+      "unique_papers": 1000
+    },
+    {
+      "instances": 2000,
+      "scale": 2000,
+      "serialized_tokens": 615472,
+      "task": "T2_NUMERIC",
+      "task_subtype_composition": "{\"measurement\": 1165, \"percentage\": 601, \"range\": 187, \"statistical_value\": 47}",
+      "unique_papers": 1374
+    },
+    {
+      "instances": 100,
+      "scale": 100,
+      "serialized_tokens": 62835,
+      "task": "T3_CLAIM",
+      "task_subtype_composition": "{\"extractive_relation_claim\": 100}",
+      "unique_papers": 100
+    },
+    {
+      "instances": 250,
+      "scale": 250,
+      "serialized_tokens": 150041,
+      "task": "T3_CLAIM",
+      "task_subtype_composition": "{\"extractive_relation_claim\": 250}",
+      "unique_papers": 250
+    },
+    {
+      "instances": 500,
+      "scale": 500,
+      "serialized_tokens": 295148,
+      "task": "T3_CLAIM",
+      "task_subtype_composition": "{\"extractive_relation_claim\": 500}",
+      "unique_papers": 500
+    },
+    {
+      "instances": 1000,
+      "scale": 1000,
+      "serialized_tokens": 594962,
+      "task": "T3_CLAIM",
+      "task_subtype_composition": "{\"extractive_relation_claim\": 1000}",
+      "unique_papers": 1000
+    },
+    {
+      "instances": 2000,
+      "scale": 2000,
+      "serialized_tokens": 1215383,
+      "task": "T3_CLAIM",
+      "task_subtype_composition": "{\"extractive_relation_claim\": 2000}",
+      "unique_papers": 1101
+    }
+  ],
+  "split": {
+    "cal100_included": 0,
+    "eval_manifest_sha256": "2ef5bf053f056b3d65464f2938e6d831f46d91c4b067174c65c6eb0330e724cf",
+    "eval_papers": 400,
+    "paper_overlap": 0,
+    "train_manifest_sha256": "cf3d98c4b68c3a407117057052005b48a44ddf9de45b3eaa8b5eb38f38279abe",
+    "train_papers": 1500
+  },
+  "status": "SFT_SCALING_MATERIALIZATION_READY",
+  "strict_nested": {
+    "T1a_ACRONYM": true,
+    "T2_NUMERIC": true,
+    "T3_CLAIM": true
+  },
+  "warnings": []
+}

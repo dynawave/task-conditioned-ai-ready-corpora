@@ -1,0 +1,4 @@
+task,n_star,n_star_status,delta_nem
+T1a_ACRONYM,1000,identified,0.02
+T2_NUMERIC,2000,N2000_reference_only,0.02
+T3_CLAIM,2000,N2000_reference_only,0.02

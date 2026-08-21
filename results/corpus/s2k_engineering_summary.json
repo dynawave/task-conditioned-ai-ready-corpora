@@ -1,0 +1,92 @@
+{
+  "scope": "S2K_engineering_audit_only",
+  "paper_count": 2000,
+  "canonical_path": "aicorpus-derived/experiments/corpus_v1/pilot2k/run_02/canonical_documents.parquet",
+  "canonical_sha256": "2c72b3615d5299534d6336c9d4a4b4db0982853011718babeabc2aafa18e007b",
+  "s2k_membership_sha256": "4381084194802c40c2a55fa77a32fb0fcc9e6b44dbd6a9e8fbfd38dc8fd108f4",
+  "views": {
+    "B1": {
+      "view": "B1",
+      "unit_count": 46826,
+      "mean_units_per_paper": 23.413,
+      "token_length": {
+        "min": 7,
+        "mean": 502.34651689232476,
+        "median": 512.0,
+        "p90": 512.0,
+        "p95": 512.0,
+        "max": 512
+      },
+      "provenance_complete_rate": 1.0,
+      "section_path_complete_rate": 0.9998932217144322,
+      "page_complete_rate": 1.0,
+      "bbox_complete_rate": 1.0,
+      "object_context_unit_rate": 0.0,
+      "object_context_counts": {
+        "figure": 0,
+        "table": 0,
+        "formula": 0
+      },
+      "mean_support_paragraphs": 0.0,
+      "build_seconds": 17.119041299214587,
+      "logical_jsonl_size_bytes": 141527410,
+      "logical_size_note": "Materialized UTF-8 JSONL byte count computed in memory; RAG views were not persisted as extra files."
+    },
+    "B2": {
+      "view": "B2",
+      "unit_count": 114511,
+      "mean_units_per_paper": 57.2555,
+      "token_length": {
+        "min": 5,
+        "mean": 193.82159792509017,
+        "median": 155.0,
+        "p90": 392.0,
+        "p95": 493.0,
+        "max": 2945
+      },
+      "provenance_complete_rate": 1.0,
+      "section_path_complete_rate": 0.9997118180786125,
+      "page_complete_rate": 1.0,
+      "bbox_complete_rate": 1.0,
+      "object_context_unit_rate": 0.0,
+      "object_context_counts": {
+        "figure": 0,
+        "table": 0,
+        "formula": 0
+      },
+      "mean_support_paragraphs": 0.0,
+      "build_seconds": 28.430058697704226,
+      "logical_jsonl_size_bytes": 154766282,
+      "logical_size_note": "Materialized UTF-8 JSONL byte count computed in memory; RAG views were not persisted as extra files."
+    },
+    "B3": {
+      "view": "B3",
+      "unit_count": 114511,
+      "mean_units_per_paper": 57.2555,
+      "token_length": {
+        "min": 9,
+        "mean": 475.9057557789208,
+        "median": 409.0,
+        "p90": 922.0,
+        "p95": 1130.0,
+        "max": 5008
+      },
+      "provenance_complete_rate": 1.0,
+      "section_path_complete_rate": 0.9997118180786125,
+      "page_complete_rate": 1.0,
+      "bbox_complete_rate": 1.0,
+      "object_context_unit_rate": 0.17650706045707398,
+      "object_context_counts": {
+        "figure": 17443,
+        "table": 5719,
+        "formula": 4659
+      },
+      "mean_support_paragraphs": 1.4468304355040127,
+      "build_seconds": 69.80297310231254,
+      "logical_jsonl_size_bytes": 322816418,
+      "logical_size_note": "Materialized UTF-8 JSONL byte count computed in memory; RAG views were not persisted as extra files."
+    }
+  },
+  "formal_retrieval_metrics_computed": false,
+  "synthetic_queries_used": false
+}

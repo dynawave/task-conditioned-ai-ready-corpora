@@ -1,0 +1,53 @@
+{
+  "capacity_decision_is_data_only": true,
+  "experiment": "corpus_v1_sft_c3_post_grid_capacity_v1",
+  "ordering_seed": "20260812_SFT_SCALE_V1",
+  "secondary_template_scales": {
+    "T2_NUMERIC": [
+      3678
+    ],
+    "T3_CLAIM": [
+      2286
+    ]
+  },
+  "selected_extension_scales": {
+    "T2_NUMERIC": [
+      3000,
+      3678
+    ],
+    "T3_CLAIM": [
+      2286
+    ]
+  },
+  "source": "C0 materialized_instances.parquet with original stable paper round-robin and MAX_INSTANCES_PER_PAPER=3",
+  "tasks": {
+    "T2_NUMERIC": {
+      "c2_n2000_prefix_exact_match": true,
+      "extension_membership_sha256": "3bff3edf72d8d853d38807020f3355e68c51d6ab7ef705abf2da9c9260e94c04",
+      "max_instances_per_paper": 3,
+      "n_max_feasible": 3678,
+      "round_counts": [
+        1374,
+        1246,
+        1058
+      ],
+      "task": "T2_NUMERIC",
+      "train_materialized_instances": 7145,
+      "unique_train_papers": 1374
+    },
+    "T3_CLAIM": {
+      "c2_n2000_prefix_exact_match": true,
+      "extension_membership_sha256": "a9390c816c5315402c6e74ffde4c94b4492345d95ef714d7c54cdb329241c037",
+      "max_instances_per_paper": 3,
+      "n_max_feasible": 2286,
+      "round_counts": [
+        1101,
+        721,
+        464
+      ],
+      "task": "T3_CLAIM",
+      "train_materialized_instances": 2936,
+      "unique_train_papers": 1101
+    }
+  }
+}

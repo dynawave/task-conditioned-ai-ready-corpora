@@ -1,0 +1,176 @@
+{
+  "blockers": [],
+  "canonical": {
+    "body_clean_character_count": 82529002,
+    "body_paragraph_count": 114511,
+    "body_raw_character_count": 82563233,
+    "canonical_element_count": 161386,
+    "excluded_counts": {
+      "document_title": 1991,
+      "empty_paragraph": 19923,
+      "footer": 22843,
+      "front_matter_unsectioned": 12676,
+      "header": 48894,
+      "page_footnote": 3270,
+      "page_number": 27813,
+      "paper_level_abstract_or_keywords": 3236,
+      "reference": 139972,
+      "reference_section_paragraph": 5530
+    },
+    "figure_caption_count": 18584,
+    "figure_caption_coverage": 0.5481844193386626,
+    "figure_count": 33901,
+    "formula_count": 7684,
+    "formula_latex_count": 7684,
+    "formula_latex_coverage": 1.0,
+    "object_bbox_count": 46875,
+    "object_bbox_coverage": 1.0,
+    "object_page_count": 46875,
+    "object_page_coverage": 1.0,
+    "other_object_count": 20,
+    "papers": 2000,
+    "paragraph_bbox_count": 114511,
+    "paragraph_bbox_coverage": 1.0,
+    "paragraph_page_count": 114511,
+    "paragraph_page_coverage": 1.0,
+    "paragraph_section_coverage": 0.9997118180786125,
+    "paragraphs_with_section": 114478,
+    "provenance_count": 161386,
+    "provenance_coverage": 1.0,
+    "section_count": 39141,
+    "suspected_word_split_paragraphs": 4018,
+    "table_caption_count": 4536,
+    "table_caption_coverage": 0.8607210626185958,
+    "table_count": 5270,
+    "table_html_count": 5008,
+    "table_html_coverage": 0.9502846299810247,
+    "uncertain_element_count": 7188
+  },
+  "canonical_failure_count": 0,
+  "canonical_success_count": 2000,
+  "canonical_success_rate": 1.0,
+  "cpt_ready": {
+    "body_clean_tokens": 21013210,
+    "body_paragraph_count": 114511,
+    "body_raw_tokens": 21115789,
+    "clean_token_retention_rate": 0.9951420711771651,
+    "contamination_candidates": {
+      "explicitly_excluded_by_parser": {
+        "document_title": 1991,
+        "empty_paragraph": 19923,
+        "footer": 22843,
+        "front_matter_unsectioned": 12676,
+        "header": 48894,
+        "page_footnote": 3270,
+        "page_number": 27813,
+        "paper_level_abstract_or_keywords": 3236,
+        "reference": 139972,
+        "reference_section_paragraph": 5530
+      },
+      "reference_like_body_paragraphs": 2525,
+      "within_paper_repeated_short_body_fragments_on_3plus_pages": 21
+    },
+    "document_count": 2000,
+    "paper_duplicate_context": {
+      "frozen_gate0_exact_normalized_title_collision_groups": 82,
+      "frozen_gate0_papers_in_title_collision_groups": 407,
+      "frozen_gate0_scope_papers": 30900,
+      "frozen_gate0_semantic_threshold": null,
+      "interpretation": "Frozen candidate signals reused; no semantic threshold was invented. S2K title collisions remain candidates, not asserted duplicates.",
+      "s2k_exact_normalized_title_collision_groups": 1,
+      "s2k_largest_title_collision_group": 11,
+      "s2k_papers_in_reliable_version_duplicate_groups": 0,
+      "s2k_papers_in_title_collision_groups": 11,
+      "s2k_reliable_version_duplicate_groups": 0
+    },
+    "paragraph_fragment_similarity": {
+      "affected_papers": 318,
+      "cross_document_groups": 61,
+      "definition": "NFKC+casefold+whitespace exact match for body fragments with at least 200 characters; cross-document only",
+      "largest_group_paragraph_members": 68,
+      "paragraph_members": 340
+    },
+    "section_structure_coverage": 0.9997118180786125,
+    "stratified_distributions": {
+      "document_type": {
+        "unavailable": 2000
+      },
+      "paragraph_count_bucket": {
+        "Q1_short": 558,
+        "Q2_medium_short": 494,
+        "Q3_medium_long": 450,
+        "Q4_long": 498
+      },
+      "structure_bucket": {
+        "S0_1": 135,
+        "S2_3": 923,
+        "S4_6": 942
+      },
+      "topic_cluster": {
+        "0": 47,
+        "1": 20,
+        "10": 23,
+        "11": 50,
+        "12": 97,
+        "13": 30,
+        "14": 27,
+        "15": 14,
+        "16": 132,
+        "17": 13,
+        "18": 104,
+        "19": 27,
+        "2": 29,
+        "20": 14,
+        "21": 10,
+        "22": 33,
+        "23": 146,
+        "25": 151,
+        "26": 36,
+        "27": 73,
+        "28": 153,
+        "29": 34,
+        "3": 141,
+        "30": 139,
+        "31": 49,
+        "4": 36,
+        "5": 136,
+        "6": 57,
+        "7": 20,
+        "8": 145,
+        "9": 14
+      },
+      "year": {
+        "unavailable": 2000
+      }
+    },
+    "suspected_word_split_paragraphs": 4018,
+    "tokenizer": {
+      "add_special_tokens": false,
+      "local_files_only": true,
+      "repository_id": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "snapshot": "<LOCAL_PATH_OMITTED>",
+      "tokenizer_bundle_sha256": "badd01fb58846dadbe2b7ce2a21a2e8e2e7257c87bf971f5689be8f4c87fa786"
+    },
+    "unicode_ocr_anomalies": {
+      "nfkc_changed_paragraphs": 12169,
+      "raw_control_or_format_character_paragraphs": 1166,
+      "replacement_nul_or_mojibake_paragraphs": 119
+    }
+  },
+  "experiment": "corpus_v1_pilot2k",
+  "limitations": [
+    "Frozen Gate0 defines semantic nearest-neighbour signals but no threshold; no semantic near-duplicate count is asserted.",
+    "S2K core assets omit content_list_process.json; the paragraph_article.source adapter is used after smoke parity validation.",
+    "Year and document type are unavailable in the frozen manifest and remain unavailable rather than inferred.",
+    "Table HTML coverage is 0.9502846299810247; missing source HTML remains null."
+  ],
+  "manifest": {
+    "database_sha256": "3b97c102d3d76143cbb75c20a7188f6e6b85273807eb69ca4f00eb2853560172",
+    "paper_count": 2000,
+    "paper_id_sha256": "4381084194802c40c2a55fa77a32fb0fcc9e6b44dbd6a9e8fbfd38dc8fd108f4",
+    "path": "aicorpus-derived/e2_prep_v25/e2_prep_v25.sqlite::source_pool_members[pool_id=S2K]",
+    "seed": 20260727
+  },
+  "readiness": "READY_FOR_RAG"
+}

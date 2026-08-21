@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code or derived release, please cite the associated paper."
+title: "From Scientific Literature to AI-Ready Corpora: A Task-Conditioned Framework and Empirical Evidence from Geoscience"
+version: 1.0.0
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Wangqiang
+    orcid: "https://orcid.org/0000-0002-5105-598X"
+    email: "zhangwq@llas.ac.cn"
+  - family-names: Wang
+    given-names: Zhaoxi
+  - family-names: Ren
+    given-names: Heng
+  - family-names: Lu
+    given-names: Linong
+  - family-names: Li
+    given-names: Huijia
+  - family-names: Yao
+    given-names: Xiaona

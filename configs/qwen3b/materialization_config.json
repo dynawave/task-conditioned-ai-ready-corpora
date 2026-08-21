@@ -1,0 +1,71 @@
+{
+  "base_model": {
+    "config_sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+    "dtype": "float16",
+    "local_files_only": true,
+    "quantization": "none",
+    "repository_id": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "snapshot": "<LOCAL_PATH_OMITTED>",
+    "tokenizer_bundle_sha256": "badd01fb58846dadbe2b7ce2a21a2e8e2e7257c87bf971f5689be8f4c87fa786",
+    "tokenizer_files": {
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  },
+  "experiment": "corpus_v1_sft_c0_deterministic_materialization_v1",
+  "frozen_inputs": {
+    "candidate_labels_v1_2_sha256": "d766b8b356a6c102255d0aed25697adca229c66c04d068c3da986b25f7502446",
+    "canonical_sha256": "2c72b3615d5299534d6336c9d4a4b4db0982853011718babeabc2aafa18e007b",
+    "holdout_manifest_sha256": "6ab748e1a5348805bb57b874ead801c56b7d33a607fe2d52add490984dda289b",
+    "holdout_membership_sha256": "e4066ba08a65e69055eb795f07b7b97715930dcce0f21a48819af35fe4541b4f",
+    "machine_verifier_v1_2_sha256": "26a035bf6e9bf7d63d0d401def58d4ddee740b6fe6057925aa368fe50e3b1bd0"
+  },
+  "materialization_rules": {
+    "T1a_ACRONYM": "exact short-long relation; reject same-context same-short distinct-long ambiguity",
+    "T2_NUMERIC": "same-paragraph unique hard-pass numeric target plus unique 8-word lexical prefix anchor",
+    "T3_CLAIM": "same-paragraph unique MV claim; include all frozen support evidence intact",
+    "context_crop": "deterministic target/anchor-centered token window; no partial required support",
+    "dedup": "exact instruction+context+response within split, keep lowest stable order",
+    "max_context_tokens": 1024
+  },
+  "ordering": {
+    "candidate": "SHA256(seed|task|candidate_id)",
+    "method": "paper round-robin; at most 3 instances per paper in N2000",
+    "paper": "SHA256(seed|task|paper|paper_id)",
+    "seed": "20260812_SFT_SCALE_V1"
+  },
+  "primary_scaling_tasks": [
+    "T1a_ACRONYM",
+    "T2_NUMERIC",
+    "T3_CLAIM"
+  ],
+  "prohibited_actions_performed": {
+    "base_evaluation": false,
+    "candidate_detector_rerun": false,
+    "llm_judge": false,
+    "llm_question_generation": false,
+    "machine_verifier_modified": false,
+    "training": false
+  },
+  "split": {
+    "method": "SHA256(seed|source_id), ascending, first 1500 train, last 400 eval",
+    "seed": "20260812_SFT_SCALING_V1"
+  },
+  "t1b_exclusion": {
+    "included_in_primary_scaling": false,
+    "reasons": [
+      "machine-verified pool is substantially smaller",
+      "cannot uniformly support the 2,000-instance upper scale",
+      "external validation scope is weaker than T1a"
+    ]
+  },
+  "template_version": "sft_scaling_extractive_v1",
+  "templates": {
+    "T1a_ACRONYM": "What does {SHORT_FORM} stand for in the passage?",
+    "T2_NUMERIC": "According to the passage, what value is reported immediately after {ANCHOR}?",
+    "T3_CLAIM": "Extract the scientific finding stated in the passage.\nPreserve the wording, conditions, polarity, negation,\nand uncertainty expressed in the evidence."
+  }
+}

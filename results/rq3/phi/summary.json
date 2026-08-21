@@ -1,0 +1,144 @@
+{
+  "complete_runs": 18,
+  "expected_runs": 18,
+  "integrity": {
+    "bootstrap_complete": true,
+    "eval_match": true,
+    "finite_loss": true,
+    "fresh_base_each_run": true,
+    "local_provenance": true,
+    "masking_pass": true,
+    "membership_match": true,
+    "paper_overlap_zero": true,
+    "prediction_files_complete": true,
+    "protocol_drift": false,
+    "target_truncation_zero": true,
+    "three_templates_complete": true
+  },
+  "model": {
+    "architecture": "Phi3ForCausalLM",
+    "attention_heads": 24,
+    "attention_implementation": "transformers native Phi3 SDPA",
+    "download_channel": "hf-mirror transport mirror",
+    "files": {
+      "LICENSE": {
+        "bytes": 1084,
+        "sha256": "fa8235e5b48faca34e3ca98cf4f694ef08bd216d28b58071a1f85b1d50cb814d"
+      },
+      "NOTICE.md": {
+        "bytes": 1809,
+        "sha256": "a3386cc7125ec75ed34d4f0a340c47782982095e251d322e01d8ecab22d87ba4"
+      },
+      "README.md": {
+        "bytes": 29246,
+        "sha256": "c4f34916182a3ee87d95d00c92847cfa687ab21dc338a577275f0c34cf0e1dfd"
+      },
+      "added_tokens.json": {
+        "bytes": 249,
+        "sha256": "d4f2aceb0f20b71dd1f4bcc7e052e4412946bf281840b8f83d39f259571af486"
+      },
+      "config.json": {
+        "bytes": 2504,
+        "sha256": "ac65d86061d3d0d704ee2511fd0eb8713ef19eb6eedba17c3080a4165d5b933b"
+      },
+      "configuration_phi3.py": {
+        "bytes": 10875,
+        "sha256": "ec2044b77d0b8111640ac134daa3af1f40dc552a739f8959626e7e58ea3352df"
+      },
+      "generation_config.json": {
+        "bytes": 168,
+        "sha256": "3e3f48753753f92d2b958679151861d4fd7bf26e4dfc41fd47056116c4914dcd"
+      },
+      "merges.txt": {
+        "bytes": 2418348,
+        "sha256": "856ce61180bb689282eed6b3a6838bb1f438399be23aefe9d20eb379791fb4ad"
+      },
+      "model-00001-of-00002.safetensors": {
+        "bytes": 4903637712,
+        "sha256": "bc703090b63eda16f639fa4de7ac54635c23105ab1da2f6ec4d3403151d38ee6"
+      },
+      "model-00002-of-00002.safetensors": {
+        "bytes": 2768428504,
+        "sha256": "7ff79b9d2d31076bac2663393451f6530f4fc8ca49b09002116c92c373dba983"
+      },
+      "model.safetensors.index.json": {
+        "bytes": 16273,
+        "sha256": "613a98d5e5716ca96fa75931abedc9c5a5d95f488ce4d62df71e639fe3ac6c59"
+      },
+      "modeling_phi3.py": {
+        "bytes": 54268,
+        "sha256": "d5fd551a7fe759b1d25e5b16b5012aa98b9b8bd400d26c7ee69c0090a245d6cd"
+      },
+      "special_tokens_map.json": {
+        "bytes": 587,
+        "sha256": "aff38493227d813e29fcf8406e8e90062f1f031aa47d589325e9c31d89ac7cc3"
+      },
+      "tokenizer.json": {
+        "bytes": 15524095,
+        "sha256": "382cc235b56c725945e149cc25f191da667c836655efd0857b004320e90e91ea"
+      },
+      "tokenizer_config.json": {
+        "bytes": 2932,
+        "sha256": "9c9b6bc0c94d95f69f826c41069a3e8b387ac3ced89601d201886e99240ac9db"
+      },
+      "vocab.json": {
+        "bytes": 3910310,
+        "sha256": "6cb65a857824fa6615bb1782d95d882617a8bbce1da0317118586b36f39e98bd"
+      }
+    },
+    "frozen_training_precision": "float16",
+    "hidden_size": 3072,
+    "index_total_size_bytes": 7672043520,
+    "key_value_heads": 8,
+    "layer_count": 32,
+    "license": "MIT",
+    "local_path": "<LOCAL_PATH_OMITTED>",
+    "model_dtype_metadata": "torch.bfloat16",
+    "model_type": "phi3",
+    "native_load_audit": {
+      "actual_target_modules": [
+        "qkv_proj",
+        "o_proj"
+      ],
+      "finite_fp16_forward": true,
+      "model_class": "Phi3ForCausalLM",
+      "trust_remote_code": false
+    },
+    "official_chat_template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% else %}{{ eos_token }}{% endif %}",
+    "official_chat_template_sha256": "febf589225c9728ab791f52e8897d7607a823d45368f0a4c92fa68997b40cce9",
+    "parameter_count": 3836021760,
+    "repo_identity": "microsoft/Phi-4-mini-instruct",
+    "revision": "revision_not_recoverable_from_local_snapshot",
+    "source_identity": "official Microsoft Hugging Face repository",
+    "status": "LOCAL_MODEL_PROVENANCE_AUDIT_PASS",
+    "tokenizer_class": "GPT2TokenizerFast",
+    "total_weight_size_bytes": 7672066216,
+    "vocab_size": 200064,
+    "weight_shard_count": 2
+  },
+  "overall_judgment": "PARTIAL_REPLICATION",
+  "research_role": "CROSS_FAMILY_DIRECTIONAL_REPLICATION",
+  "smoke_excluded_from_formal_results": true,
+  "status": "SECOND_MODEL_REPLICATION_READY",
+  "task_judgments": {
+    "T1a_ACRONYM": "EARLY_PLATEAU_PATTERN_REPLICATED",
+    "T2_NUMERIC": "LATER_PLATEAU_PATTERN_REPLICATED",
+    "T3_CLAIM": "MIXED"
+  },
+  "technical_retries": 0,
+  "training_cost": {
+    "assistant_target_tokens_processed": 2184408,
+    "gpu_hours": 13.47697985233334,
+    "input_tokens_processed": 45728946,
+    "peak_vram_max_bytes": 10761323008,
+    "peak_vram_min_bytes": 10544891392,
+    "runtime_seconds": 48517.127468400024
+  },
+  "warnings": [
+    "TRAINING_STOCHASTICITY_WARNING",
+    "SOURCE_PROVENANCE_AUDIT_WARNING",
+    "LOCAL_SNAPSHOT_REVISION_NOT_RECOVERABLE",
+    "LLAMA_ACCESS_HISTORY_PRESERVED",
+    "CROSS_FAMILY_SCALE_RESPONSE_NOT_MODEL_LEADERBOARD"
+  ]
+}

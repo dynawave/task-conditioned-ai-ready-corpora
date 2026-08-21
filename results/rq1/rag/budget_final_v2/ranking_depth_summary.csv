@@ -1,0 +1,4 @@
+view,formal_question_count,initial_top256_needs_expansion,top512_additional_needed,beyond_top512_needed,max_actual_required_rank_depth,p95_required_rank_depth,candidate_exhausted_before_2048_tokens,budget_prefix_incomplete@512,budget_prefix_incomplete@1024,budget_prefix_incomplete@2048
+B1,1292,0,0,0,5,5.0,42,0,0,0
+B2,1292,0,0,0,43,24.0,42,0,0,0
+B3,1292,0,0,0,26,13.0,4,0,0,0

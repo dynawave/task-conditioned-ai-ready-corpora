@@ -1,0 +1,25 @@
+{
+  "change_type": "LOGICAL_HIERARCHY_REPAIR_ONLY",
+  "derived_from": {
+    "machine_verifier_config_v1_1_path": "aicorpus-derived\\experiments\\corpus_v1\\sft_a\\machine_validation_v1_1\\machine_verifier_config_v1_1.json",
+    "sha256": "ae5a45cc055a3f151e77e97f0d59119956f39c1a8fdd4c03a8d3b7a8838c8cf3"
+  },
+  "experiment": "corpus_v1_sft_b_hierarchy_repair_v1_2",
+  "frozen_verifier_accept_v1_1": "deterministically reconstructed from persisted v1.1 verifier primitive scores/flags; exact equality to stored v1.1 labels is required",
+  "machine_verified_v1_2": "materialization_ready_v1_1 AND frozen_verifier_accept_v1_1",
+  "no_expensive_steps_rerun": {
+    "NLI_inference": false,
+    "PDF_parse": false,
+    "candidate_detection": false,
+    "external_benchmark": false
+  },
+  "unchanged": {
+    "counterfactual_checks": true,
+    "detectors": true,
+    "external_validation": true,
+    "hard_gates": true,
+    "materialization_ready_definition": true,
+    "nli_model_revision": "b3546ea6b0346eb6f8d5d68b13c7dc6d0376b3d7",
+    "scifact_threshold": 0.007826457731425762
+  }
+}
