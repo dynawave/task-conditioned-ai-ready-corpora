@@ -45,3 +45,11 @@ Model weights are obtained separately from their official repositories and are n
 - `MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli`
 
 The exact revisions available in frozen records are retained in the sanitized configuration files. Consult each upstream model card and license.
+
+## Adaptive Chunking feasibility method
+
+- Publication: *Adaptive Chunking: Optimizing Chunking-Method Selection for RAG*, LREC 2026; preprint `arXiv:2603.25333v1`.
+- Official source: <https://github.com/ekimetrics/adaptive-chunking>.
+- Frozen source revision used for the feasibility assessment: `ea87ce8e1a97888f3f179e7f1359ff7f43fb179d` (package version `0.1.0`).
+- Scope: only the official deterministic `our_recurs_600` and `our_recurs_1100` candidate generators were assessed; the complete multi-candidate adaptive selector was not run.
+- Redistribution: no upstream source code or third-party paper text is redistributed. Obtain the implementation from its official repository and follow its license and installation instructions.

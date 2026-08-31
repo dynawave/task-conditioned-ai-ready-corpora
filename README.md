@@ -4,9 +4,11 @@
 
 Authors: see published/submitted manuscript
 
-Release version: **v1.0.0**
+Release version: **v1.0.1**
 
 This release is a whitelist-built, copyright-aware companion to the paper. It supports unified scientific-document engineering, RAG evidence representation, source-paper prioritization, SFT scaling, practical-equivalence analysis, robustness checks, and figure reproduction. Frozen numerical outputs are copied without recomputing or changing the formal experiments.
+
+Version 1.0.1 is an incremental IP&M editorial-revision reproducibility update. Figures 1–5 and the original primary RQ1/RQ2/RQ3 result files are unchanged from v1.0.0.
 
 ## Contents
 
@@ -44,6 +46,11 @@ This repository does **not** redistribute publisher PDFs, publisher XML/HTML, pa
 | Supplementary Table S18 | reviewer-check script | frozen seeds in outputs | `results/rq2/reviewer2/rq2_length_only_baseline.csv` |
 | Supplementary Table S19 | machine-validation code | `configs/sft/` | `results/robustness/t2_numeric_eligibility_funnel.csv` |
 | Supplementary Table S20 | `code/statistics/mjsa_statistics.py` | audit seed in `results/mjsa/mjsa_summary.json` | `results/mjsa/` |
+| Sections 5.6 and 6.4; Supplementary S9.1; Table S12A / RQ3 No-SFT | `code/corpus_experiments_v1/sft/run_sft_c0_no_sft_control.py`, `run_sft_c0_no_sft_vs_n100_bootstrap.py` | frozen C2 protocol and evaluation membership hashes | `results/rq3/no_sft/no_sft_control.json` |
+| Supplementary S15.1 / Adaptive Chunking feasibility assessment | `code/corpus_experiments_v1/rag/run_adaptive_chunking_feasibility.py` | method commit and frozen RQ1 model/input hashes in result | `results/rq1/sensitivity/adaptive_chunking_feasibility.json` |
+| Supplementary S15.2 / structure-only/title-augmented sensitivity | `code/corpus_experiments_v1/rag/run_hierarchical_structure_feasibility.py` | seed and frozen RQ1 model/input hashes in result | `results/rq1/sensitivity/structure_title_augmented_sensitivity.json` |
+
+The No-SFT control is not an `n=0` learning-curve point and is not added to Figure 4. The two RQ1 additions are feasibility/sensitivity analyses, not new B4 representations in the primary B1/B2/B3 comparison.
 
 ## Quick validation
 
@@ -70,3 +77,9 @@ The exact mixed-content scope is defined in [LICENSE_SCOPE.md](LICENSE_SCOPE.md)
 Two historical metadata boundaries are disclosed neutrally: the historical MJSA bootstrap RNG seed was not recorded, and the exact historical `microsoft/Phi-4-mini-instruct` snapshot revision could not be recovered. Available frozen outputs and configurations remain included. See [docs/REPRODUCIBILITY_LIMITATIONS.md](docs/REPRODUCIBILITY_LIMITATIONS.md).
 
 See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for Level A and Level B instructions.
+
+## v1.0.1 release note
+
+Added: the RQ3 No-SFT control and paired statistics, the RQ1 Adaptive Chunking feasibility assessment, the RQ1 structure/title-augmented sensitivity analysis, and their manuscript-to-artifact mappings.
+
+Unchanged: primary Figures 1–5; core RQ1, RQ2, and RQ3 experimental results; original data-isolation and evaluation protocols.

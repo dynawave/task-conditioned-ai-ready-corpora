@@ -14,6 +14,14 @@ The plotting script verifies SHA-256 checksums for its 14 formal inputs before c
 
 The validation script checks the headline corpus, RQ1, RQ2, RQ3, model-replication, and MJSA values and rejects forbidden binary extensions or private-path/secret patterns. It does not retrain a model or overwrite frozen results.
 
+For v1.0.1 it also directly checks the frozen values in:
+
+- `results/rq3/no_sft/no_sft_control.json` (Sections 5.6/6.4, Supplementary S9.1, Table S12A);
+- `results/rq1/sensitivity/adaptive_chunking_feasibility.json` (Supplementary S15.1);
+- `results/rq1/sensitivity/structure_title_augmented_sensitivity.json` (Supplementary S15.2).
+
+No-SFT is an independent control condition, not an `n=0` SFT learning-curve point. The RQ1 additions are development-only feasibility/sensitivity checks and do not replace the frozen B1/B2/B3 comparison.
+
 ## Level B — model experiments (requires external data and GPU)
 
 Level B requires legally obtained source documents, official third-party resources, and the official base models. The public package provides configurations, scripts, anonymous memberships, and hashes but not copyrighted text or weights.
@@ -43,4 +51,8 @@ Set the repository `code/` directory on `PYTHONPATH` before invoking package-sty
 - 3 epochs, AdamW, learning rate `2e-4`, warmup ratio `0.03`, effective batch 8, maximum sequence length 1280, assistant-only loss.
 - Seeds 42, 314159, 271828.
 
-Model paths in release scripts are supplied using `QWEN3B_MODEL_PATH`, `QWEN7B_MODEL_PATH`, and `PHI4MINI_MODEL_PATH` or resolved from the official Hugging Face identifiers. See the corresponding sanitized protocol files for all retained parameters.
+All released training runners use `local_files_only=True`; they do not automatically resolve or download model files from Hugging Face. Obtain the specified official model revision, store that exact snapshot locally, and provide its path through `QWEN3B_MODEL_PATH`, `QWEN7B_MODEL_PATH`, or `PHI4MINI_MODEL_PATH` as applicable. See the corresponding sanitized protocol files for the retained model revisions and parameters.
+
+### Editorial-revision analysis reruns
+
+The actual runners are released as `run_sft_c0_no_sft_control.py`, `run_sft_c0_no_sft_vs_n100_bootstrap.py`, `run_adaptive_chunking_feasibility.py`, and `run_hierarchical_structure_feasibility.py`. Full reruns require the legally obtained, hash-matching frozen QASPER/RQ3 evaluation assets described above; text-bearing predictions and benchmark content are not redistributed. The Adaptive runner additionally requires the official upstream repository at commit `ea87ce8e1a97888f3f179e7f1359ff7f43fb179d` and assesses only its deterministic recursive candidates, not the complete adaptive selector.

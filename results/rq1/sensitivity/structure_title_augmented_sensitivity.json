@@ -1,0 +1,53 @@
+{
+  "analysis": "structure-only/title-augmented sensitivity",
+  "status": "DEVELOPMENT_ONLY_NOT_FORMAL_RQ1_RESULT",
+  "feasibility_judgment": "CONDITIONAL",
+  "sampling": {
+    "dataset": "QASPER v0.3 test",
+    "seed": 20260823,
+    "papers": 20,
+    "formal_questions": 65
+  },
+  "representations": {
+    "paragraph": "frozen B2 section-aware atomic paragraph units",
+    "structure_title_augmented": "identical paragraph membership with repeated [Paper] title plus existing [Section] and [Paragraph] serialization",
+    "paragraph_units": 827,
+    "structure_title_augmented_units": 827
+  },
+  "coverage": {
+    "fully_covered_questions": 63,
+    "fully_covered_rate": 0.9692307692307692,
+    "mean_best_gold_recall_ceiling": 0.9846153846153847,
+    "identical_between_representations": true
+  },
+  "token_statistics": {
+    "paragraph_mean_tokens": 108.42684401451028,
+    "paragraph_total_tokens": 89669,
+    "structure_title_augmented_mean_tokens": 123.85489721886336,
+    "structure_title_augmented_total_tokens": 102428,
+    "token_increase_rate": 0.14228997758422635,
+    "paragraph_units_over_512": 0,
+    "structure_title_augmented_units_over_512": 0
+  },
+  "retrieval_diagnostics": {
+    "model": "BAAI/bge-base-en-v1.5",
+    "model_revision": "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+    "token_budget": 1024,
+    "paragraph_CES_at_5": 0.6,
+    "structure_title_augmented_CES_at_5": 0.6,
+    "paragraph_BudgetCES_at_1024": 0.7230769230769231,
+    "structure_title_augmented_BudgetCES_at_1024": 0.6307692307692307,
+    "formal_inference_or_bootstrap": false
+  },
+  "protocol_checks": {
+    "unit_counts_identical": true,
+    "atomic_membership_identical": true,
+    "coverage_identical": true,
+    "paragraph_B2_regression_matches_frozen_results": true,
+    "same_retrieval_and_metric_code": true,
+    "no_training": true
+  },
+  "interpretation": "Adding repeated paper-title and limited structural metadata did not change CES@5 in this sensitivity sample, increased token cost, and reduced BudgetCES@1024. Formal B2 already contains Section-to-Paragraph organization; this is not a new primary hierarchy baseline and does not establish a causal explanation for SEP performance.",
+  "frozen_source_artifact_sha256": "41f5601e14e0a05cd8a454dfddadb8ba33469f676270019a7914c4d3317eca23",
+  "frozen_runner_sha256": "c8dba519fabfa53dd17f193d7b445c2fb188c48a69cacc26bf295a6e4e6d75ad"
+}
