@@ -258,7 +258,7 @@ def main() -> None:
         },
         "method_version_source": {
             "paper": "Adaptive Chunking: Optimizing Chunking-Method Selection for RAG",
-            "paper_version": "arXiv:2603.25333v1; accepted LREC 2026",
+            "paper_version": "LREC 2026 publication; supplementary preprint arXiv:2603.25333v1",
             "official_repository": "https://github.com/ekimetrics/adaptive-chunking",
             "official_commit": commit,
             "package_version": "0.1.0",

@@ -51,7 +51,7 @@ Set the repository `code/` directory on `PYTHONPATH` before invoking package-sty
 - 3 epochs, AdamW, learning rate `2e-4`, warmup ratio `0.03`, effective batch 8, maximum sequence length 1280, assistant-only loss.
 - Seeds 42, 314159, 271828.
 
-Model paths in release scripts are supplied using `QWEN3B_MODEL_PATH`, `QWEN7B_MODEL_PATH`, and `PHI4MINI_MODEL_PATH` or resolved from the official Hugging Face identifiers. See the corresponding sanitized protocol files for all retained parameters.
+All released training runners use `local_files_only=True`; they do not automatically resolve or download model files from Hugging Face. Obtain the specified official model revision, store that exact snapshot locally, and provide its path through `QWEN3B_MODEL_PATH`, `QWEN7B_MODEL_PATH`, or `PHI4MINI_MODEL_PATH` as applicable. See the corresponding sanitized protocol files for the retained model revisions and parameters.
 
 ### Editorial-revision analysis reruns
 

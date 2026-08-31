@@ -47,6 +47,11 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
+def repository_relative_path(path: Path) -> str:
+    """Return a portable metadata path for an asset located under the repository root."""
+    return path.resolve().relative_to(ROOT).as_posix()
+
+
 def build_hierarchical_units(
     paper_id: str,
     paper: dict[str, Any],
@@ -414,7 +419,7 @@ def main() -> None:
             "top_k": rag.TOP_K,
             "token_budget": rag.TOKEN_BUDGET,
             "budget_rule": "ranked whole units until the next unit would exceed the budget",
-            "metric_implementation": str(Path(rag.__file__).resolve()),
+            "metric_implementation": repository_relative_path(Path(rag.__file__)),
         },
         "coverage": {
             "paragraph_baseline": paragraph_coverage,
@@ -440,11 +445,11 @@ def main() -> None:
         "paragraph_regression_difference_count": len(regression_differences),
         "paragraph_regression_differences": regression_differences[:20],
         "inputs": {
-            "formal_retrieval_results": str(FORMAL_RESULTS.resolve()),
+            "formal_retrieval_results": repository_relative_path(FORMAL_RESULTS),
             "formal_retrieval_results_sha256": sha256_file(FORMAL_RESULTS),
-            "qasper_archive": str(QASPER_ARCHIVE.resolve()),
+            "qasper_archive": repository_relative_path(QASPER_ARCHIVE),
             "qasper_archive_sha256": sha256_file(QASPER_ARCHIVE),
-            "runner": str(Path(__file__).resolve()),
+            "runner": repository_relative_path(Path(__file__)),
             "runner_sha256": sha256_file(Path(__file__).resolve()),
         },
         "environment": {
