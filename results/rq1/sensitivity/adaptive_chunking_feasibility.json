@@ -1,0 +1,56 @@
+{
+  "analysis": "Adaptive Chunking feasibility assessment",
+  "status": "DEVELOPMENT_ONLY_NOT_FORMAL_RQ1",
+  "feasibility_judgment": "CONDITIONAL",
+  "method": {
+    "title": "Adaptive Chunking: Optimizing Chunking-Method Selection for RAG",
+    "publication": "LREC 2026",
+    "preprint": "arXiv:2603.25333v1",
+    "official_repository": "https://github.com/ekimetrics/adaptive-chunking",
+    "official_commit": "ea87ce8e1a97888f3f179e7f1359ff7f43fb179d",
+    "package_version": "0.1.0",
+    "assessed_scope": "official deterministic our_recurs_600 and our_recurs_1100 candidate generation only",
+    "full_adaptive_selector_run": false
+  },
+  "selection": {
+    "dataset": "QASPER v0.3 test",
+    "rule": "first 10 lexicographically sorted paper IDs in the frozen retrieval-eligible cohort",
+    "papers_tested": 10,
+    "papers_successful": 10,
+    "papers_failed": 0
+  },
+  "evidence_mapping": {
+    "gold_evidence_items": 157,
+    "fully_mapped": 132,
+    "multi_chunk": 0,
+    "unmapped": 25
+  },
+  "candidate_diagnostics": [
+    {
+      "candidate": "our_recurs_600",
+      "approximate_target_tokens": 600,
+      "chunks": 125,
+      "chunks_over_BGE_512_token_limit": 85,
+      "mean_chunk_tokens": 531.488,
+      "total_chunk_tokens": 66436
+    },
+    {
+      "candidate": "our_recurs_1100",
+      "approximate_target_tokens": 1100,
+      "chunks": 73,
+      "chunks_over_BGE_512_token_limit": 64,
+      "mean_chunk_tokens": 910.082191780822,
+      "total_chunk_tokens": 66436
+    }
+  ],
+  "frozen_RQ1_compatibility": {
+    "embedding_model": "BAAI/bge-base-en-v1.5",
+    "embedding_revision": "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+    "embedding_max_length": 512,
+    "retrieval_run": false,
+    "CES_or_BudgetCES_run": false
+  },
+  "interpretation": "Recursive candidate construction was technically feasible, but the complete method also requires method-specific candidate selection and intrinsic-selection components. Adding it as B4 would mix representation, adaptive selection, and retrieval optimization, while many candidates exceed the frozen BGE input limit. This is not evidence that Adaptive Chunking is worse than B1/B2/B3 and is not a reproduction of the complete published method.",
+  "frozen_source_artifact_sha256": "e6ca73f74c9cd7daebfd6e91149060b4bad148a18b33abe203ee561788c32541",
+  "frozen_runner_sha256": "c4a4608f6dfbd6db6f1321b47cf974f51001a19731b0d77ae5a4b2ee00fa0b4b"
+}

@@ -1,0 +1,84 @@
+{
+  "analysis": "RQ3 No-SFT control",
+  "status": "NO_SFT_VS_N100_BOOTSTRAP_READY",
+  "release_role": "editorial_revision_control_not_n0_learning_curve_point",
+  "model": {
+    "repository_id": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "dtype": "float16",
+    "quantization": "none",
+    "adapter_loaded": false,
+    "training_performed": false
+  },
+  "evaluation_protocol": {
+    "template": "TEMPLATE_0_PRIMARY",
+    "generation": "deterministic greedy; do_sample=false; num_beams=1",
+    "metric": "normalized exact match (NEM)",
+    "normalization": "Unicode NFKC; trim; collapse whitespace; case-sensitive",
+    "same_frozen_evaluation_membership_as_formal_RQ3": true
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "method": "outer resampling of three N100 training seeds; inner paired resampling of frozen evaluation examples",
+    "comparison": "N100_SFT_MINUS_NO_SFT",
+    "implementation": "run_sft_c2_full_grid.hierarchical_bootstrap",
+    "p_value": null,
+    "p_value_status": "NOT_SUPPORTED_BY_FROZEN_C2_IMPLEMENTATION"
+  },
+  "results": [
+    {
+      "task": "T1a_ACRONYM",
+      "eval_n": 300,
+      "eval_instance_ids_sha256": "835e08549f2a3d9c914985f775291547718bef985541b3865ea0246c1f231157",
+      "no_sft_NEM": 0.0,
+      "n100_sft_seed_NEM": [0.8633333333333333, 0.8533333333333334, 0.8633333333333333],
+      "n100_sft_mean_NEM": 0.86,
+      "delta_N100_SFT_minus_No_SFT": 0.86,
+      "ci95_low": 0.8366666666666666,
+      "ci95_high": 0.8833333333333333
+    },
+    {
+      "task": "T2_NUMERIC",
+      "eval_n": 300,
+      "eval_instance_ids_sha256": "6bb607658b764ecf904b975e467a7bf6f2132f56f1cb50ed71c8b0581fbe50a7",
+      "no_sft_NEM": 0.0,
+      "n100_sft_seed_NEM": [0.84, 0.84, 0.85],
+      "n100_sft_mean_NEM": 0.8433333333333333,
+      "delta_N100_SFT_minus_No_SFT": 0.8433333333333333,
+      "ci95_low": 0.8188888888888889,
+      "ci95_high": 0.8677777777777779
+    },
+    {
+      "task": "T3_CLAIM",
+      "eval_n": 293,
+      "eval_instance_ids_sha256": "69260b3a2892ddde08e710dba780cd85090069d3f296da14252aa5d290f053da",
+      "no_sft_NEM": 0.0,
+      "n100_sft_seed_NEM": [0.28668941979522183, 0.2832764505119454, 0.31399317406143346],
+      "n100_sft_mean_NEM": 0.2946530147895336,
+      "delta_N100_SFT_minus_No_SFT": 0.2946530147895336,
+      "ci95_low": 0.2605233219567691,
+      "ci95_high": 0.32992036405005687
+    }
+  ],
+  "frozen_source_artifacts": {
+    "run_sft_scaling_endpoint_v1.py_sha256": "9c225fbfa58d9313dc2670f28e3f7db779e65cf122e42b8ac88fd5f2f80e3cd6",
+    "run_sft_c0_no_sft_control.py_sha256": "bf9a46b145a1aefb531d65c84f4a8eeaa7a6f93577bb4bdca6af8f24ae771b2a",
+    "run_sft_c0_no_sft_vs_n100_bootstrap.py_sha256": "1f4c44ccf79f7f6f675e78bc4d07c6e866d6e7dbe64b4a6e22db94d8c2913d84",
+    "no_sft_control_summary.json_sha256": "90a911f573322d8a2e5cab217018d57c268b032dd2155049a340bf722bee081f",
+    "no_sft_vs_n100_bootstrap.json_sha256": "f4f58f1eab621a4a3746ca39813d1d596baf56202deb8a798c0947f6ed9d6241",
+    "no_sft_control_predictions.parquet_sha256": "b7b5b3be4650225098c965d0d0bad3fd9e3ff74e07a167da931b141c952b460b",
+    "prediction_rows": 893,
+    "predictions_included_in_public_release": false,
+    "prediction_exclusion_reason": "Frozen evaluation instances and text-bearing predictions are not redistributed; membership hashes and aggregate results are released.",
+    "public_endpoint_runner_note": "The released endpoint runner replaces only the private local model snapshot path with QWEN3B_MODEL_PATH."
+  },
+  "protocol_checks": {
+    "frozen_inputs": "PASS",
+    "paired_eval_instance_ids": "PASS",
+    "template_0_primary": "PASS",
+    "nem_recomputed_matches_saved_metrics": "PASS",
+    "no_adapter": "PASS",
+    "no_training": "PASS"
+  },
+  "interpretation_limit": "No-SFT is a control condition, not the n=0 point of the SFT learning curve. NEM=0 applies only to this evaluation task, template, generation protocol, and metric."
+}

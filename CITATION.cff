@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this code or derived release, please cite the associated paper."
 title: "From Scientific Literature to AI-Ready Corpora: A Task-Conditioned Framework and Empirical Evidence from Geoscience"
-version: 1.0.0
+version: 1.0.1
 type: software
 authors:
   - family-names: Zhang
